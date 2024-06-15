@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMinaIT - Front-End Development</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/vbs5wqp.css" />
+    <link rel="icon" type="image/png" href="favicon.ico" />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"
+    ></script>
+    <script defer type="module" src="index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#99d0f4",
+              secondary: "#2c6d90",
+              accent: "#f6a26a",
+              background: "#e8f4fd",
+              text: "#333333",
+              border: "#dedede",
+              muted: "#999999",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="header container">
+        <img src="images/iminait-logo.svg" alt="IMinaIT Logo" class="logo" />
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a href="https://github.com/MinaAmrouche" target="_blank">
+                <img src="images/github.png" alt="GitHub Logo" class="picto" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/mina-amrouche-a67b81115/"
+                target="_blank"
+              >
+                <img
+                  src="images/linkedin.png"
+                  alt="LinkedIn Logo"
+                  class="picto"
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="intro">
+        <div class="container">
+          <img src="images/hero.png" alt="Hero image" class="sm:hidden" />
+          <div class="intro-content">
+            <p>
+              I'm
+              <span class="name" data-text="Mina Amrouche"></span>
+            </p>
+            <p>A React & Vue developer</p>
+            <button class="cta"><a href="#contact">Contact me</a></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="container">
+        <h2>About</h2>
+        <p>
+          I'm Mina, a passionate front-end developer with a passion for creating
+          beautiful and intuitive user interfaces. I specialize in JavaScript,
+          React, and Vue.js, and have experience working with popular web
+          frameworks such as React Native and PWA. I'm always looking for new
+          and exciting projects to work on, and I'm always looking for ways to
+          improve my skills and stay up-to-date with the latest technologies.
+          I'm excited to bring my skills and experience to your next project.
+        </p>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <h2>Services</h2>
+        <p>
+          At IMinaIT, I transform ideas into digital realities. Here are some of
+          the services I offer:
+        </p>
+        <ul class="services-list">
+          <li>
+            <h3>JavaScript Development</h3>
+            <p>
+              Building dynamic and interactive web applications using modern
+              JavaScript frameworks.
+            </p>
+          </li>
+          <li>
+            <h3>React and Vue.js Specialization</h3>
+            <p>
+              Creating high-performance, scalable applications with React and
+              Vue.js.
+            </p>
+          </li>
+          <li>
+            <h3>UX/UI Design Collaboration</h3>
+            <p>
+              Working closely with designers to create intuitive and engaging
+              user interfaces.
+            </p>
+          </li>
+          <li>
+            <h3>Custom Web Applications</h3>
+            <p>
+              Developing tailored web solutions that meet your unique business
+              needs.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <h2>Projects</h2>
+        <p>Here are a few examples of the projects I've worked on:</p>
+        <ul class="projects-list">
+          <li>
+            <h3>Car Rental Application</h3>
+            <p>
+              A user-friendly application for booking and managing car rentals,
+              built with React and Firebase.
+            </p>
+          </li>
+          <li>
+            <h3>Nationwide Tennis Platform</h3>
+            <p>
+              A comprehensive platform for managing tennis tournaments and
+              player rankings, developed using Vue.js.
+            </p>
+          </li>
+          <li>
+            <h3>Children's Game</h3>
+            <p>
+              A challenging and engaging mobile-first PWA game for children,
+              created with Vue.js and Firebase.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>
+          Let's create something great together! Feel free to reach out to me
+          for any inquiries or project collaborations.
+        </p>
+        <p>Email: <a href="mailto:mina@iminait.com">mina@iminait.com</a></p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 IMinaIT. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
