@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  nav ul li {
+    @apply mx-4 my-0;
+  }
+  nav ul li a {
+    @apply flex text-xl text-white no-underline hover:underline;
+  }
+
+  h1 {
+    @apply text-white;
+  }
+  h2 {
+    @apply text-secondary text-5xl font-mono mb-4;
+  }
+  h3 {
+    @apply text-secondary;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+}

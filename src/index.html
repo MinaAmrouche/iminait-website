@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMinaIT - Front-End Development</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Font stylesheet -->
+    <link rel="stylesheet" href="https://use.typekit.net/vbs5wqp.css" />
+    <link rel="icon" type="image/png" href="images/favicon.ico" />
+    <script defer type="module" src="index.js"></script>
+  </head>
+  <body>
+    <header
+      class="from-secondary to-primary flex h-screen flex-wrap bg-gradient-to-b shadow-md"
+    >
+      <div
+        class="container relative flex h-24 w-full items-center justify-between text-white"
+      >
+        <img
+          src="images/iminait-logo.svg"
+          alt="IMinaIT Logo"
+          class="animate-spin-slow w-16"
+        />
+        <nav class="flex">
+          <ul class="hidden list-none justify-center p-0 sm:flex">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <ul class="flex list-none justify-center p-0">
+            <li>
+              <a href="https://github.com/MinaAmrouche" target="_blank">
+                <img src="images/github.png" alt="GitHub Logo" class="w-6" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/mina-amrouche-a67b81115/"
+                target="_blank"
+              >
+                <img
+                  src="images/linkedin.png"
+                  alt="LinkedIn Logo"
+                  class="w-6"
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="w-full">
+        <div
+          class="max-w container flex items-center justify-end text-4xl md:justify-between"
+        >
+          <img
+            src="images/hero.png"
+            alt="Hero image"
+            class="hidden w-2/5 md:block"
+          />
+          <div class="max-w-3xl text-right">
+            <p>I'm</p>
+            <p>
+              <span
+                class="name text-tertiary font-mono text-5xl"
+                data-text="Mina Amrouche"
+              ></span>
+            </p>
+            <p>
+              A <span class="font-display font-bold">React</span> &
+              <span class="font-display font-bold">Vue</span> developer
+            </p>
+            <button
+              class="text-accent hover:bg-accent border-accent cursor-pointer rounded-md border-2 border-solid bg-none px-4 py-2 text-sm font-bold uppercase outline-none hover:text-white"
+            >
+              <a href="#contact">Contact me</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="text-2xl">
+      <section id="about" class="py-8">
+        <div class="container">
+          <h2>About me</h2>
+          <div>
+            <p>
+              <img
+                src="images/profile-pic.jpg"
+                alt="Profile image"
+                class="float-start mr-8 w-1/3 rounded"
+              />
+
+              I'm Mina, a
+              <span class="text-accent">front-end developer</span> with over 8
+              years of experience in web development. I have a passion for
+              <span class="text-accent"
+                >building projects from the ground up</span
+              >
+              and turning ideas into working web applications. I specialise in
+              JavaScript, using
+              <span class="text-accent">React & Vue</span>, to create smooth and
+              user-friendly experiences.
+            </p>
+            <p class="hidden">
+              My work at Monsieur Biz, Saegus, and UbiOps has given me the
+              chance to understand different client needs and deliver custom
+              solutions that meet their goals. Now, as a self-employed front-end
+              developer, I manage various projects, always focusing on quality
+              and attention to detail.
+            </p>
+            <p class="hidden">
+              I have a master's degree in computer programming and I'm a
+              certified Professional Scrum Master. This background helps me
+              bring both technical expertise and a collaborative approach to
+              every project I work on. I love working with teams, including
+              UI/UX designers and back-end developers, to create cohesive and
+              integrated solutions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="bg-background clear-both py-8">
+        <div class="container">
+          <h2>Services</h2>
+          <p>
+            At IMinaIT, I transform ideas into digital realities. Here are some
+            of the services I offer:
+          </p>
+          <ul class="services-list">
+            <li>
+              <h3>JavaScript Development</h3>
+              <p>
+                Building dynamic and interactive web applications using modern
+                JavaScript frameworks.
+              </p>
+            </li>
+            <li>
+              <h3>React and Vue.js Specialization</h3>
+              <p>
+                Creating high-performance, scalable applications with React and
+                Vue.js.
+              </p>
+            </li>
+            <li>
+              <h3>UX/UI Design Collaboration</h3>
+              <p>
+                Working closely with designers to create intuitive and engaging
+                user interfaces.
+              </p>
+            </li>
+            <li>
+              <h3>Custom Web Applications</h3>
+              <p>
+                Developing tailored web solutions that meet your unique business
+                needs.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects" class="py-8">
+        <div class="container">
+          <h2>Projects</h2>
+          <p>Here are a few examples of the projects I've worked on:</p>
+          <ul class="projects-list">
+            <li>
+              <h3>Car Rental Application</h3>
+              <p>
+                A user-friendly application for booking and managing car
+                rentals, built with React and Firebase.
+              </p>
+            </li>
+            <li>
+              <h3>Nationwide Tennis Platform</h3>
+              <p>
+                A comprehensive platform for managing tennis tournaments and
+                player rankings, developed using Vue.js.
+              </p>
+            </li>
+            <li>
+              <h3>Children's Game</h3>
+              <p>
+                A challenging and engaging mobile-first PWA game for children,
+                created with Vue.js and Firebase.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-background py-8">
+        <div class="container">
+          <h2 class="text-center">Contact</h2>
+          <p class="mb-6 text-center">
+            Let's create something great together! Feel free to reach out to me
+            for any inquiries or project collaborations.
+          </p>
+          <div class="flex flex-wrap justify-around gap-4">
+            <button
+              class="font-display bg-secondary flex items-center gap-3 rounded-md px-6 py-3 text-xl text-white hover:opacity-90"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z"
+                />
+                <path
+                  d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z"
+                />
+              </svg>
+              <a href="mailto:mina@iminait.com">Email me</a>
+            </button>
+            <button
+              class="font-display bg-secondary flex items-center gap-3 rounded-md px-6 py-3 text-xl text-white hover:opacity-90"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+
+              <a
+                href="https://calendly.com/mina-amrouche/30min"
+                target="_blank"
+              >
+                Book a call
+              </a>
+            </button>
+            <button
+              class="font-display bg-secondary flex items-center gap-3 rounded-md px-6 py-3 text-xl text-white hover:opacity-90"
+            >
+              <img src="images/linkedin.png" alt="LinkedIn Logo" class="w-6" />
+              <a
+                href="https://www.linkedin.com/in/mina-amrouche-a67b81115/"
+                target="_blank"
+              >
+                Connect
+              </a>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="bg-secondary flex items-center justify-center px-0 py-4 text-center text-white"
+    >
+      <div class="container">
+        <p class="m-0">&copy; 2024 IMinaIT. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
