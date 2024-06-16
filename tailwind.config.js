@@ -18,6 +18,7 @@ module.exports = {
         secondary: "#2c6d90",
         tertiary: "#d1eafa",
         accent: "rgb(236 84 36)",
+        "light-accent": "#f39072",
         background: "#e8f4fd",
         text: "#333333",
         border: "#dedede",

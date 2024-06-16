@@ -17,7 +17,7 @@
     @apply text-secondary mb-4 font-mono text-5xl;
   }
   h3 {
-    @apply text-secondary;
+    @apply text-accent mb-4 text-2xl;
   }
 
   a {
@@ -29,6 +29,50 @@
   }
 
   .slide .container {
-    @apply relative z-10 overflow-hidden py-8;
+    @apply relative z-10 overflow-hidden py-12;
+  }
+
+  ul.services-list {
+    @apply grid gap-4 lg:grid-cols-3 xl:gap-8;
+
+    grid-template-areas:
+      "second"
+      "first";
+  }
+
+  @media (min-width: 640px) {
+    ul.services-list {
+      grid-template-areas: "second first";
+    }
+  }
+
+  @media (min-width: 1024px) {
+    ul.services-list {
+      grid-template-areas:
+        "first second second"
+        "first third fourth";
+      grid-template-columns: 1fr 1.3fr 1.3fr;
+      grid-template-rows: 8em 13em;
+    }
+  }
+
+  .services-list > li {
+    @apply hover:bg-secondary overflow-hidden rounded-3xl bg-white p-6 text-lg hover:text-white;
+  }
+
+  .services-list > li:hover > h3 {
+    @apply text-light-accent;
+  }
+
+  .services-list > li:first-child {
+    grid-area: first;
+  }
+
+  .services-list > li:nth-child(2) {
+    grid-area: second;
+  }
+
+  .services-list > li > ul {
+    @apply list-disc pl-4;
   }
 }

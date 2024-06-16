@@ -2,9 +2,10 @@ import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-function typeNameAnimation() {
-  gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
+function typeNameAnimation() {
   gsap.defaults({ ease: "none" });
 
   const tl = gsap.timeline();
@@ -15,8 +16,6 @@ function typeNameAnimation() {
 }
 
 function parallaxAnimation() {
-  gsap.registerPlugin(ScrollTrigger);
-
   // TODO: add parallax animation
 }
 
