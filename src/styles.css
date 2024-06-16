@@ -14,7 +14,7 @@
     @apply text-white;
   }
   h2 {
-    @apply text-secondary text-5xl font-mono mb-4;
+    @apply text-secondary mb-4 font-mono text-5xl;
   }
   h3 {
     @apply text-secondary;
@@ -22,5 +22,13 @@
 
   a {
     @apply text-inherit no-underline;
+  }
+
+  .slide .background {
+    @apply absolute left-0 top-0 -z-10 h-screen w-screen;
+  }
+
+  .slide .container {
+    @apply relative z-10 overflow-hidden py-8;
   }
 }
