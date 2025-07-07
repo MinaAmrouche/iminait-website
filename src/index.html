@@ -17,18 +17,18 @@
   </head>
   <body class="bg-dark text-light overflow-x-hidden">
     <!-- Navigation -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 safe-area-inset-top">
       <div class="container mx-auto px-6 py-4">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between min-h-[60px]">
           <div class="flex items-center space-x-4">
-            <img src="images/iminait-logo.svg" alt="IMinaIT Logo" class="w-10 h-10" />
+            <img src="images/iminait-logo.svg" alt="IMinaIT Logo" class="w-8 h-8 sm:w-10 sm:h-10" />
             <div class="flex flex-col">
-              <span class="font-mono text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">IMinaIT</span>
-              <span class="text-xs text-gray-400 font-medium">by Mina Amrouche</span>
+              <span class="font-mono text-lg sm:text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">IMinaIT</span>
+              <span class="text-xs text-gray-400 font-medium hidden sm:block">by Mina Amrouche</span>
             </div>
           </div>
           
-          <div class="hidden md:flex items-center space-x-8">
+          <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
             <a href="#about" class="nav-link">About</a>
             <a href="#skills" class="nav-link">Skills</a>
             <a href="#experience" class="nav-link">Experience</a>
@@ -36,7 +36,7 @@
             <a href="#contact" class="nav-link">Contact</a>
           </div>
           
-          <button id="mobile-menu-btn" class="md:hidden text-light">
+          <button id="mobile-menu-btn" class="md:hidden text-light p-2 -mr-2 touch-manipulation">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -45,23 +45,23 @@
       </div>
       
       <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden bg-dark-secondary/95 backdrop-blur-md border-t border-primary/20 hidden">
+      <div id="mobile-menu" class="md:hidden bg-dark-secondary/95 backdrop-blur-md border-t border-primary/20 hidden safe-area-inset-bottom">
         <div class="container mx-auto px-6 py-4 space-y-4">
-          <a href="#about" class="block nav-link">About</a>
-          <a href="#skills" class="block nav-link">Skills</a>
-          <a href="#experience" class="block nav-link">Experience</a>
-          <a href="#projects" class="block nav-link">Projects</a>
-          <a href="#contact" class="block nav-link">Contact</a>
+          <a href="#about" class="block nav-link py-3 text-lg touch-manipulation">About</a>
+          <a href="#skills" class="block nav-link py-3 text-lg touch-manipulation">Skills</a>
+          <a href="#experience" class="block nav-link py-3 text-lg touch-manipulation">Experience</a>
+          <a href="#projects" class="block nav-link py-3 text-lg touch-manipulation">Projects</a>
+          <a href="#contact" class="block nav-link py-3 text-lg touch-manipulation">Contact</a>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-6">
       <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-dark to-dark-secondary"></div>
       
       <!-- Soft Floating Elements -->
-      <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute inset-0 overflow-hidden hidden sm:block">
         <div class="floating-element absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-xl"></div>
         <div class="floating-element absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-secondary/20 to-lavender/20 rounded-full blur-lg"></div>
         <div class="floating-element absolute bottom-40 left-20 w-40 h-40 bg-gradient-to-br from-lavender/20 to-primary/20 rounded-full blur-2xl"></div>
@@ -69,35 +69,35 @@
         <div class="floating-element absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full blur-md"></div>
       </div>
       
-      <div class="container mx-auto px-6 relative z-10">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="text-center lg:text-left">
+      <div class="container mx-auto relative z-10 w-full">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div class="text-center lg:text-left order-2 lg:order-1">
             <div class="mb-8">
-              <p class="text-lg text-primary/80 mb-3 font-medium">Hello, I'm</p>
-              <h1 class="text-5xl lg:text-7xl font-bold mb-6">
+              <p class="text-base sm:text-lg text-primary/80 mb-3 font-medium">Hello, I'm</p>
+              <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
                 <span class="bg-gradient-to-r from-light via-primary to-secondary bg-clip-text text-transparent">Mina</span>
-                <span class="bg-gradient-to-r from-secondary via-lavender to-primary bg-clip-text text-transparent block lg:inline"> Amrouche</span>
+                <span class="bg-gradient-to-r from-secondary via-cyan to-primary bg-clip-text text-transparent block sm:inline lg:block xl:inline"> Amrouche</span>
               </h1>
-              <div class="text-xl lg:text-2xl text-primary/90 mb-4">
+              <div class="text-lg sm:text-xl lg:text-2xl text-primary/90 mb-4">
                 <span id="typed-text" class="font-mono"></span>
                 <span class="animate-pulse text-secondary">|</span>
               </div>
-              <p class="text-lg text-secondary/80 font-medium">
+              <p class="text-base sm:text-lg text-secondary/80 font-medium">
                 Founder of <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-bold">IMinaIT</span>
               </p>
             </div>
             
-            <p class="text-lg text-gray-300 mb-10 max-w-2xl leading-relaxed">
+            <p class="text-base sm:text-lg text-gray-300 mb-8 lg:mb-10 max-w-2xl leading-relaxed mx-auto lg:mx-0">
               Passionate software engineer and founder of IMinaIT, crafting beautiful, scalable applications with modern technologies. 
               I create exceptional user experiences through clean code and thoughtful design.
             </p>
             
-            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 lg:mb-10">
               <a href="#projects" class="btn-primary">View My Work</a>
               <a href="#contact" class="btn-secondary">Let's Connect</a>
             </div>
             
-            <div class="flex justify-center lg:justify-start space-x-6">
+            <div class="flex justify-center lg:justify-start space-x-4 sm:space-x-6">
               <a href="https://github.com/MinaAmrouche" target="_blank" class="social-link">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
@@ -111,12 +111,12 @@
             </div>
           </div>
           
-          <div class="relative">
+          <div class="relative order-1 lg:order-2 mb-8 lg:mb-0">
             <!-- Soft Illustration -->
-            <div class="relative z-10 max-w-md mx-auto">
+            <div class="relative z-10 max-w-xs sm:max-w-md mx-auto">
               <div class="relative">
                 <!-- Main illustration container -->
-                <div class="w-80 h-80 mx-auto relative">
+                <div class="w-64 h-64 sm:w-80 sm:h-80 mx-auto relative">
                   <!-- Background soft shapes -->
                   <div class="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full blur-3xl animate-pulse-soft"></div>
                   <div class="absolute top-4 left-4 right-4 bottom-4 bg-gradient-to-tr from-cyan/20 to-secondary/20 rounded-full blur-2xl animate-float"></div>
@@ -124,31 +124,31 @@
                   <!-- Central figure -->
                   <div class="absolute inset-8 bg-gradient-to-br from-light/10 to-primary/20 rounded-full backdrop-blur-sm border border-primary/30">
                     <!-- Hair -->
-                    <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-32 h-20 bg-gradient-to-b from-secondary to-indigo rounded-t-full opacity-80"></div>
+                    <div class="absolute top-4 sm:top-6 left-1/2 transform -translate-x-1/2 w-24 sm:w-32 h-16 sm:h-20 bg-gradient-to-b from-secondary to-indigo rounded-t-full opacity-80"></div>
                     
                     <!-- Face -->
-                    <div class="absolute top-16 left-1/2 transform -translate-x-1/2 w-20 h-24 bg-gradient-to-b from-light/90 to-light/70 rounded-full"></div>
+                    <div class="absolute top-12 sm:top-16 left-1/2 transform -translate-x-1/2 w-16 sm:w-20 h-20 sm:h-24 bg-gradient-to-b from-light/90 to-light/70 rounded-full"></div>
                     
                     <!-- Body -->
-                    <div class="absolute top-32 left-1/2 transform -translate-x-1/2 w-24 h-32 bg-gradient-to-b from-primary/60 to-secondary/60 rounded-t-full"></div>
+                    <div class="absolute top-24 sm:top-32 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-24 sm:h-32 bg-gradient-to-b from-primary/60 to-secondary/60 rounded-t-full"></div>
                     
                     <!-- Arms -->
-                    <div class="absolute top-36 left-8 w-6 h-20 bg-gradient-to-b from-light/70 to-primary/40 rounded-full transform rotate-12"></div>
-                    <div class="absolute top-36 right-8 w-6 h-20 bg-gradient-to-b from-light/70 to-primary/40 rounded-full transform -rotate-12"></div>
+                    <div class="absolute top-28 sm:top-36 left-6 sm:left-8 w-4 sm:w-6 h-16 sm:h-20 bg-gradient-to-b from-light/70 to-primary/40 rounded-full transform rotate-12"></div>
+                    <div class="absolute top-28 sm:top-36 right-6 sm:right-8 w-4 sm:w-6 h-16 sm:h-20 bg-gradient-to-b from-light/70 to-primary/40 rounded-full transform -rotate-12"></div>
                   </div>
                   
                   <!-- Floating elements around the figure -->
-                  <div class="absolute top-12 right-8 w-8 h-8 bg-gradient-to-br from-accent to-indigo rounded-full animate-float opacity-60"></div>
-                  <div class="absolute bottom-16 left-6 w-6 h-6 bg-gradient-to-br from-secondary to-primary rounded-full animate-float opacity-70" style="animation-delay: -1s;"></div>
-                  <div class="absolute top-20 left-4 w-4 h-4 bg-gradient-to-br from-indigo to-secondary rounded-full animate-float opacity-50" style="animation-delay: -2s;"></div>
-                  <div class="absolute bottom-20 right-12 w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-full animate-float opacity-40" style="animation-delay: -0.5s;"></div>
+                  <div class="absolute top-8 sm:top-12 right-6 sm:right-8 w-6 sm:w-8 h-6 sm:h-8 bg-gradient-to-br from-accent to-indigo rounded-full animate-float opacity-60"></div>
+                  <div class="absolute bottom-12 sm:bottom-16 left-4 sm:left-6 w-4 sm:w-6 h-4 sm:h-6 bg-gradient-to-br from-secondary to-primary rounded-full animate-float opacity-70" style="animation-delay: -1s;"></div>
+                  <div class="absolute top-16 sm:top-20 left-2 sm:left-4 w-3 sm:w-4 h-3 sm:h-4 bg-gradient-to-br from-indigo to-secondary rounded-full animate-float opacity-50" style="animation-delay: -2s;"></div>
+                  <div class="absolute bottom-16 sm:bottom-20 right-8 sm:right-12 w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-br from-primary to-accent rounded-full animate-float opacity-40" style="animation-delay: -0.5s;"></div>
                 </div>
               </div>
             </div>
             
             <!-- Decorative elements -->
-            <div class="absolute -top-8 -left-8 w-16 h-16 bg-gradient-to-br from-secondary/30 to-indigo/30 rounded-full blur-lg animate-pulse-soft"></div>
-            <div class="absolute -bottom-8 -right-8 w-20 h-20 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-xl animate-pulse-soft" style="animation-delay: -1s;"></div>
+            <div class="absolute -top-4 sm:-top-8 -left-4 sm:-left-8 w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-br from-secondary/30 to-indigo/30 rounded-full blur-lg animate-pulse-soft"></div>
+            <div class="absolute -bottom-4 sm:-bottom-8 -right-4 sm:-right-8 w-16 sm:w-20 h-16 sm:h-20 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-xl animate-pulse-soft" style="animation-delay: -1s;"></div>
           </div>
         </div>
       </div>
@@ -179,25 +179,24 @@
               <img
                 src="images/profile-pic.webp"
                 alt="Mina Amrouche - Founder of IMinaIT"
-                class="w-full max-w-md mx-auto rounded-4xl shadow-soft border border-primary/20"
+                class="w-full max-w-sm sm:max-w-md mx-auto rounded-4xl shadow-soft border border-primary/20"
               />
             </div>
-            <div class="absolute -bottom-6 -right-6 bg-gradient-to-br from-secondary to-lavender text-white p-6 rounded-2xl shadow-glow">
-            <div class="absolute -bottom-6 -right-6 bg-gradient-to-br from-secondary to-indigo text-white p-6 rounded-2xl shadow-glow">
-              <p class="font-bold text-xl">8+ Years</p>
-              <p class="text-sm opacity-90">Experience</p>
+            <div class="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-gradient-to-br from-secondary to-indigo text-white p-4 sm:p-6 rounded-2xl shadow-glow">
+              <p class="font-bold text-lg sm:text-xl">8+ Years</p>
+              <p class="text-xs sm:text-sm opacity-90">Experience</p>
             </div>
             <!-- Decorative elements -->
-            <div class="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-xl"></div>
-            <div class="absolute top-1/2 -right-8 w-16 h-16 bg-gradient-to-br from-indigo/20 to-accent/20 rounded-full blur-lg"></div>
+            <div class="absolute -top-4 -left-4 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-xl"></div>
+            <div class="absolute top-1/2 -right-6 sm:-right-8 w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-br from-indigo/20 to-accent/20 rounded-full blur-lg"></div>
           </div>
           
-          <div class="space-y-6">
+          <div class="space-y-4 sm:space-y-6">
             <div>
-              <h3 class="text-3xl font-bold bg-gradient-to-r from-light to-primary bg-clip-text text-transparent mb-4">
+              <h3 class="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-light to-primary bg-clip-text text-transparent mb-4">
                 Software Engineer & Founder of IMinaIT
               </h3>
-              <p class="text-gray-300 leading-relaxed mb-6">
+              <p class="text-sm sm:text-base text-gray-300 leading-relaxed mb-4 sm:mb-6">
                 I'm the founder of IMinaIT, a software development company specializing in creating beautiful, 
                 functional applications. My journey spans from elegant frontend experiences with React and Vue.js 
                 to robust backend systems, cloud architecture, and team leadership. I'm passionate about creating 
@@ -205,22 +204,22 @@
               </p>
             </div>
             
-            <div class="grid grid-cols-2 gap-6">
-              <div class="bg-dark p-6 rounded-2xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow">
-                <h4 class="font-bold text-primary mb-2">Frontend Artistry</h4>
-                <p class="text-sm text-gray-400">React, Vue.js, TypeScript, Modern CSS</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              <div class="bg-dark p-4 sm:p-6 rounded-2xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow">
+                <h4 class="font-bold text-primary mb-2 text-sm sm:text-base">Frontend Artistry</h4>
+                <p class="text-xs sm:text-sm text-gray-400">React, Vue.js, TypeScript, Modern CSS</p>
               </div>
-              <div class="bg-dark p-6 rounded-2xl border border-secondary/20 hover:border-secondary/40 transition-all duration-300 hover:shadow-glow">
-                <h4 class="font-bold text-secondary mb-2">Backend & Cloud</h4>
-                <p class="text-sm text-gray-400">Node.js, Python, AWS, Database Design</p>
+              <div class="bg-dark p-4 sm:p-6 rounded-2xl border border-secondary/20 hover:border-secondary/40 transition-all duration-300 hover:shadow-glow">
+                <h4 class="font-bold text-secondary mb-2 text-sm sm:text-base">Backend & Cloud</h4>
+                <p class="text-xs sm:text-sm text-gray-400">Node.js, Python, AWS, Database Design</p>
               </div>
-              <div class="bg-dark p-6 rounded-2xl border border-indigo/20 hover:border-indigo/40 transition-all duration-300 hover:shadow-glow">
-                <h4 class="font-bold text-indigo mb-2">Team Leadership</h4>
-                <p class="text-sm text-gray-400">Scrum Master, Mentoring, Architecture</p>
+              <div class="bg-dark p-4 sm:p-6 rounded-2xl border border-indigo/20 hover:border-indigo/40 transition-all duration-300 hover:shadow-glow">
+                <h4 class="font-bold text-indigo mb-2 text-sm sm:text-base">Team Leadership</h4>
+                <p class="text-xs sm:text-sm text-gray-400">Scrum Master, Mentoring, Architecture</p>
               </div>
-              <div class="bg-dark p-6 rounded-2xl border border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-glow">
-                <h4 class="font-bold text-accent mb-2">Quality Focus</h4>
-                <p class="text-sm text-gray-400">Testing, CI/CD, Code Reviews</p>
+              <div class="bg-dark p-4 sm:p-6 rounded-2xl border border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-glow">
+                <h4 class="font-bold text-accent mb-2 text-sm sm:text-base">Quality Focus</h4>
+                <p class="text-xs sm:text-sm text-gray-400">Testing, CI/CD, Code Reviews</p>
               </div>
             </div>
           </div>
@@ -238,15 +237,15 @@
           </p>
         </div>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           <div class="skill-category group">
             <div class="skill-icon bg-gradient-to-br from-primary to-secondary">
-              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-6 sm:w-8 h-6 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-light mb-4">Frontend</h3>
-            <ul class="space-y-2 text-gray-400">
+            <h3 class="text-lg sm:text-xl font-bold text-light mb-3 sm:mb-4">Frontend</h3>
+            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-400">
               <li>React & Next.js</li>
               <li>Vue.js & Nuxt.js</li>
               <li>TypeScript</li>
@@ -257,12 +256,12 @@
           
           <div class="skill-category group">
             <div class="skill-icon bg-gradient-to-br from-secondary to-indigo">
-              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-6 sm:w-8 h-6 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M0 0v24h24V0H0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-light mb-4">Backend</h3>
-            <ul class="space-y-2 text-gray-400">
+            <h3 class="text-lg sm:text-xl font-bold text-light mb-3 sm:mb-4">Backend</h3>
+            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-400">
               <li>Node.js & Express</li>
               <li>Python & Django</li>
               <li>RESTful APIs</li>
@@ -273,12 +272,12 @@
           
           <div class="skill-category group">
             <div class="skill-icon bg-gradient-to-br from-indigo to-accent">
-              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-6 sm:w-8 h-6 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 0C5.374 0 0 5.373 0 12s5.374 12 12 12 12-5.373 12-12S18.626 0 12 0zm-.094 19.283c-3.771 0-6.849-2.305-8.134-5.52l2.515-1.045c.694 2.252 2.707 3.89 5.619 3.89 2.913 0 5.26-2.369 5.26-5.283S15.913 6.042 12 6.042c-1.297 0-2.49.47-3.407 1.253l1.407 1.407-5.657 0V3.045l1.97 1.97C7.757 3.731 9.776 2.717 12 2.717c5.046 0 9.283 4.178 9.283 9.283S17.046 19.283 12 19.283z"/>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-light mb-4">Database & Cloud</h3>
-            <ul class="space-y-2 text-gray-400">
+            <h3 class="text-lg sm:text-xl font-bold text-light mb-3 sm:mb-4">Database & Cloud</h3>
+            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-400">
               <li>PostgreSQL & MongoDB</li>
               <li>AWS & Azure</li>
               <li>Docker & Kubernetes</li>
@@ -289,12 +288,12 @@
           
           <div class="skill-category group">
             <div class="skill-icon bg-gradient-to-br from-accent to-primary">
-              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-6 sm:w-8 h-6 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 0c-6.627 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-light mb-4">Tools & Methods</h3>
-            <ul class="space-y-2 text-gray-400">
+            <h3 class="text-lg sm:text-xl font-bold text-light mb-3 sm:mb-4">Tools & Methods</h3>
+            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-400">
               <li>Git & GitHub</li>
               <li>Agile & Scrum</li>
               <li>Testing (Jest, Cypress)</li>
@@ -384,35 +383,35 @@
           </p>
         </div>
         
-        <div class="grid lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <div class="project-card group">
             <div class="project-image">
-              <div class="bg-gradient-to-br from-primary to-secondary h-48 rounded-t-2xl flex items-center justify-center">
-                <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <div class="bg-gradient-to-br from-primary to-secondary h-40 sm:h-48 rounded-t-2xl flex items-center justify-center">
+                <svg class="w-12 sm:w-16 h-12 sm:h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                 </svg>
               </div>
             </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-light mb-3">Enterprise Dashboard</h3>
-              <p class="text-gray-400 mb-4">
+            <div class="p-4 sm:p-6">
+              <h3 class="text-lg sm:text-xl font-bold text-light mb-3">Enterprise Dashboard</h3>
+              <p class="text-sm sm:text-base text-gray-400 mb-4">
                 Full-stack analytics platform built with React, Node.js, and PostgreSQL. 
                 Features real-time data visualization and user management.
               </p>
-              <div class="flex flex-wrap gap-2 mb-4">
+              <div class="flex flex-wrap gap-1 sm:gap-2 mb-4">
                 <span class="tech-tag">React</span>
                 <span class="tech-tag">Node.js</span>
                 <span class="tech-tag">PostgreSQL</span>
                 <span class="tech-tag">AWS</span>
               </div>
-              <div class="flex space-x-4">
+              <div class="flex space-x-3 sm:space-x-4">
                 <a href="#" class="text-primary hover:text-secondary transition-colors">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <svg class="w-4 sm:w-5 h-4 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                   </svg>
                 </a>
                 <a href="#" class="text-primary hover:text-secondary transition-colors">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="w-4 sm:w-5 h-4 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                   </svg>
                 </a>
@@ -573,7 +572,7 @@
                     id="name"
                     name="name"
                     required
-                    class="w-full px-4 py-3 bg-dark-secondary border border-primary/30 rounded-xl text-light placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                    class="w-full px-4 py-3 bg-dark-secondary border border-primary/30 rounded-xl text-light placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all touch-manipulation"
                     placeholder="Your full name"
                   />
                 </div>
@@ -585,7 +584,7 @@
                     id="email"
                     name="email"
                     required
-                    class="w-full px-4 py-3 bg-dark-secondary border border-primary/30 rounded-xl text-light placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                    class="w-full px-4 py-3 bg-dark-secondary border border-primary/30 rounded-xl text-light placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all touch-manipulation"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -597,7 +596,7 @@
                     id="subject"
                     name="subject"
                     required
-                    class="w-full px-4 py-3 bg-dark-secondary border border-primary/30 rounded-xl text-light placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                    class="w-full px-4 py-3 bg-dark-secondary border border-primary/30 rounded-xl text-light placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all touch-manipulation"
                     placeholder="Project inquiry"
                   />
                 </div>
@@ -609,14 +608,14 @@
                     name="message"
                     rows="5"
                     required
-                    class="w-full px-4 py-3 bg-dark-secondary border border-primary/30 rounded-xl text-light placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none"
+                    class="w-full px-4 py-3 bg-dark-secondary border border-primary/30 rounded-xl text-light placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none touch-manipulation"
                     placeholder="Tell me about your project..."
                   ></textarea>
                 </div>
                 
                 <button
                   type="submit"
-                  class="w-full bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-lavender text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-glow focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-dark"
+                  class="w-full bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-indigo text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-glow focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-dark touch-manipulation"
                 >
                   Send Message
                 </button>
