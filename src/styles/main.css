@@ -54,7 +54,7 @@
   
   /* Floating Elements */
   .floating-element {
-    animation: float 8s ease-in-out infinite;
+    @apply absolute inset-0 bg-gradient-to-br from-primary/10 via-dark to-dark-secondary;
   }
   
   .floating-element:nth-child(2) {
@@ -196,7 +196,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply from-secondary to-rose;
+  @apply from-secondary to-indigo;
 }
 
 /* Selection styling */
