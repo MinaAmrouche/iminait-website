@@ -1,22 +1,28 @@
 {
   "name": "iminait-website",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "parcel": "^2.12.0",
+    "@tailwindcss/postcss": "^4.1.11",
     "postcss": "^8.4.38",
     "prettier": "^3.3.2",
-    "prettier-plugin-tailwindcss": "^0.6.4",
-    "tailwindcss": "^3.4.4"
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "tailwindcss": "^4.1.11",
+    "vite": "^5.0.0",
+    "vite-svg-loader": "^5.1.0"
   },
   "dependencies": {
-    "gsap": "^3.12.5"
+    "@vitejs/plugin-vue": "^6.0.0",
+    "gsap": "^3.12.5",
+    "vue": "^3.5.17"
   }
 }
