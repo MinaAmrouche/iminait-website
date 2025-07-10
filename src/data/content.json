@@ -1,0 +1,224 @@
+{
+  "site": {
+    "title": "Mina Amrouche - Software Engineer | IMinaIT",
+    "description": "Passionate software engineer and founder of IMinaIT, crafting beautiful, scalable applications with modern technologies."
+  },
+  "navigation": {
+    "logo": {
+      "text": "IMinaIT",
+      "subtitle": "by Mina Amrouche"
+    },
+    "links": [
+      { "href": "#about", "text": "About" },
+      { "href": "#skills", "text": "Skills" },
+      { "href": "#experience", "text": "Experience" },
+      { "href": "#projects", "text": "Projects" },
+      { "href": "#contact", "text": "Contact" }
+    ]
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": {
+      "first": "Mina",
+      "last": "Amrouche"
+    },
+    "typedTexts": [
+      "Software Engineer",
+      "Creative Problem Solver",
+      "Full-Stack Developer",
+      "React Specialist",
+      "Vue.js Expert",
+      "Technical Leader",
+      "UI/UX Enthusiast"
+    ],
+    "subtitle": "Founder of IMinaIT",
+    "description": "Passionate software engineer and founder of IMinaIT, crafting beautiful, scalable applications with modern technologies. I create exceptional user experiences through clean code and thoughtful design.",
+    "buttons": {
+      "primary": "View My Work",
+      "secondary": "Let's Connect"
+    }
+  },
+  "about": {
+    "title": "About Me & IMinaIT",
+    "subtitle": "Passionate software engineer and founder of IMinaIT with 8+ years of experience creating beautiful, scalable applications and leading development teams.",
+    "mainTitle": "Software Engineer & Founder of IMinaIT",
+    "description": "I'm the founder of IMinaIT, a software development company specializing in creating beautiful, functional applications. My journey spans from elegant frontend experiences with React and Vue.js to robust backend systems, cloud architecture, and team leadership. I'm passionate about creating solutions that not only work flawlessly but also delight users.",
+    "experienceYears": "8+ Years",
+    "experienceLabel": "Experience",
+    "skills": [
+      {
+        "title": "Frontend Artistry",
+        "description": "React, Vue.js, TypeScript, Modern CSS"
+      },
+      {
+        "title": "Backend & Cloud",
+        "description": "Node.js, Python, AWS, Database Design"
+      },
+      {
+        "title": "Team Leadership",
+        "description": "Scrum Master, Mentoring, Architecture"
+      },
+      {
+        "title": "Quality Focus",
+        "description": "Testing, CI/CD, Code Reviews"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "subtitle": "A comprehensive toolkit for building modern, beautiful, and scalable applications at IMinaIT",
+    "categories": [
+      {
+        "title": "Frontend",
+        "skills": [
+          "React & Next.js",
+          "Vue.js & Nuxt.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "GSAP Animations"
+        ]
+      },
+      {
+        "title": "Backend",
+        "skills": [
+          "Node.js & Express",
+          "Python & Django",
+          "RESTful APIs",
+          "GraphQL",
+          "Microservices"
+        ]
+      },
+      {
+        "title": "Database & Cloud",
+        "skills": [
+          "PostgreSQL & MongoDB",
+          "AWS & Azure",
+          "Docker & Kubernetes",
+          "Redis & Caching",
+          "CI/CD Pipelines"
+        ]
+      },
+      {
+        "title": "Tools & Methods",
+        "skills": [
+          "Git & GitHub",
+          "Agile & Scrum",
+          "Testing (Jest, Cypress)",
+          "Webpack & Vite",
+          "Code Reviews"
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Professional Journey",
+    "subtitle": "Building innovative solutions and leading development teams with passion and creativity",
+    "positions": [
+      {
+        "title": "Founder & Senior Software Engineer",
+        "company": "IMinaIT",
+        "period": "2020 - Present",
+        "description": "Founded IMinaIT, leading full-stack development projects, architecting elegant solutions, and mentoring junior developers. Specialized in React, Vue.js, and cloud infrastructure.",
+        "achievements": [
+          "Built 15+ production applications serving 100k+ users",
+          "Reduced application load times by 60% through optimization",
+          "Led team of 5 developers using Agile methodologies",
+          "Implemented CI/CD pipelines reducing deployment time by 80%"
+        ]
+      },
+      {
+        "title": "Frontend Developer",
+        "company": "Previous Companies",
+        "period": "2016 - 2020",
+        "description": "Developed responsive web applications and collaborated with design teams to create exceptional user experiences across various industries.",
+        "achievements": [
+          "Developed 20+ responsive web applications",
+          "Collaborated with UX/UI designers on user-centered design",
+          "Implemented modern JavaScript frameworks and libraries",
+          "Maintained 95%+ code coverage through comprehensive testing"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A showcase of recent work demonstrating technical expertise and creative problem-solving at IMinaIT",
+    "items": [
+      {
+        "title": "Enterprise Dashboard",
+        "description": "Full-stack analytics platform built with React, Node.js, and PostgreSQL. Features real-time data visualization and user management.",
+        "technologies": ["React", "Node.js", "PostgreSQL", "AWS"]
+      },
+      {
+        "title": "E-Commerce Platform",
+        "description": "Modern e-commerce solution with Vue.js frontend, microservices architecture, and integrated payment processing.",
+        "technologies": ["Vue.js", "Python", "MongoDB", "Stripe"]
+      },
+      {
+        "title": "Mobile-First PWA",
+        "description": "Progressive web application with offline capabilities, push notifications, and native app-like experience across all devices.",
+        "technologies": ["PWA", "TypeScript", "Service Workers", "Firebase"]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's Create Together",
+    "subtitle": "Ready to bring your ideas to life? Let's discuss your next project and create something beautiful together with IMinaIT.",
+    "mainTitle": "Get In Touch",
+    "description": "I'm always interested in new opportunities and exciting projects. Whether you need a full-stack developer, technical consultant, or creative collaborator, let's connect and explore how IMinaIT can help bring your vision to life.",
+    "contactMethods": [
+      {
+        "type": "email",
+        "title": "Email",
+        "value": "mina@iminait.com",
+        "href": "mailto:mina@iminait.com"
+      },
+      {
+        "type": "calendar",
+        "title": "Schedule a Call",
+        "value": "Book a 30-minute consultation",
+        "href": "https://calendly.com/mina-amrouche/30min"
+      },
+      {
+        "type": "linkedin",
+        "title": "LinkedIn",
+        "value": "Connect professionally",
+        "href": "https://www.linkedin.com/in/mina-amrouche-a67b81115/"
+      }
+    ],
+    "form": {
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Your full name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "your.email@example.com"
+        },
+        "subject": {
+          "label": "Subject",
+          "placeholder": "Project inquiry"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Tell me about your project..."
+        }
+      },
+      "submitButton": "Send Message",
+      "loadingText": "Sending...",
+      "successText": "Message Sent!"
+    }
+  },
+  "footer": {
+    "logo": {
+      "text": "IMinaIT",
+      "subtitle": "by Mina Amrouche"
+    },
+    "copyright": "© 2024 IMinaIT by Mina Amrouche. All rights reserved. Crafted with passion and modern web technologies."
+  },
+  "social": {
+    "github": "https://github.com/MinaAmrouche",
+    "linkedin": "https://www.linkedin.com/in/mina-amrouche-a67b81115/"
+  }
+}

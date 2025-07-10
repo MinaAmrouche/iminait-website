@@ -2,16 +2,23 @@ import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { ContentLoader, ContentRenderer } from './content-loader.js';
 
 // Register GSAP plugins
 gsap.registerPlugin(TextPlugin, ScrollTrigger, ScrollToPlugin);
 
 class ModernWebsite {
   constructor() {
+    this.contentLoader = new ContentLoader();
+    this.contentRenderer = new ContentRenderer(this.contentLoader);
     this.init();
   }
 
-  init() {
+  async init() {
+    // Load and render content first
+    await this.contentRenderer.renderAll();
+    
+    // Then initialize interactive features
     this.setupNavigation();
     this.setupTypingAnimation();
     this.setupScrollAnimations();
@@ -74,14 +81,12 @@ class ModernWebsite {
     const typedText = document.getElementById('typed-text');
     if (!typedText) return;
 
-    const texts = [
+    // Get typed texts from content
+    const hero = this.contentLoader.getHero();
+    const texts = hero.typedTexts || [
       'Software Engineer',
       'Creative Problem Solver',
-      'Full-Stack Developer',
-      'React Specialist',
-      'Vue.js Expert',
-      'Technical Leader',
-      'UI/UX Enthusiast'
+      'Full-Stack Developer'
     ];
 
     let currentIndex = 0;
@@ -258,7 +263,7 @@ class ModernWebsite {
           <svg class="w-5 h-5 mr-2 inline" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
           </svg>
-          Message Sent!
+          ${this.contentLoader.getContact().form?.successText || 'Message Sent!'}
         `;
         submitBtn.classList.add('bg-gradient-to-r', 'from-green-500', 'to-green-600');
         submitBtn.classList.remove('from-primary', 'to-secondary');
