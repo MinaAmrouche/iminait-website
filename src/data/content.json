@@ -17,7 +17,7 @@
     ]
   },
   "hero": {
-    "greeting": "Hi, I'm",
+    "greeting": "Hello, I'm",
     "name": {
       "first": "Mina",
       "last": "Amrouche"

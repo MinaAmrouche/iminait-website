@@ -3,10 +3,10 @@
     <div class="container mx-auto px-6">
       <div class="mb-16 text-center">
         <h2 class="section-title">
-          {{ projects.title || "Featured Projects" }}
+          {{ projects.title }}
         </h2>
         <p class="mx-auto max-w-2xl text-gray-300">
-          {{ projects.subtitle || "" }}
+          {{ projects.subtitle }}
         </p>
       </div>
 
@@ -27,7 +27,7 @@
             </div>
           </div>
           <div class="p-4 sm:p-6">
-            <h3 class="mb-3 text-lg font-bold text-light sm:text-xl">
+            <h3 class="text-light mb-3 text-lg font-bold sm:text-xl">
               {{ project.title }}
             </h3>
             <p class="mb-4 text-sm text-gray-400 sm:text-base">

@@ -3,10 +3,10 @@
     <div class="container mx-auto px-6">
       <div class="mb-16 text-center">
         <h2 class="section-title">
-          {{ experience.title || "Professional Journey" }}
+          {{ experience.title }}
         </h2>
         <p class="mx-auto max-w-2xl text-gray-300">
-          {{ experience.subtitle || "" }}
+          {{ experience.subtitle }}
         </p>
       </div>
 

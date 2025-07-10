@@ -5,37 +5,37 @@
       <div class="relative mx-auto h-64 w-64 sm:h-80 sm:w-80">
         <!-- Background soft shapes -->
         <div
-          class="absolute inset-0 animate-pulse-soft rounded-full bg-linear-to-br from-primary/30 to-secondary/30 blur-3xl"
+          class="animate-pulse-soft from-primary/30 to-secondary/30 absolute inset-0 rounded-full bg-linear-to-br blur-3xl"
         ></div>
         <div
-          class="absolute bottom-4 left-4 right-4 top-4 animate-float rounded-full bg-linear-to-tr from-cyan/20 to-secondary/20 blur-2xl"
+          class="animate-float from-cyan/20 to-secondary/20 absolute top-4 right-4 bottom-4 left-4 rounded-full bg-linear-to-tr blur-2xl"
         ></div>
 
         <!-- Central figure -->
         <div
-          class="absolute inset-8 rounded-full border border-primary/30 bg-linear-to-br from-light/10 to-primary/20 backdrop-blur-sm"
+          class="border-primary/30 from-light/10 to-primary/20 absolute inset-8 rounded-full border bg-linear-to-br backdrop-blur-sm"
         >
           <!-- Hair -->
           <div
-            class="absolute left-1/2 top-4 h-16 w-24 -translate-x-1/2 transform rounded-t-full bg-linear-to-b from-secondary to-indigo opacity-80 sm:top-6 sm:h-20 sm:w-32"
+            class="from-secondary to-indigo absolute top-4 left-1/2 h-16 w-24 -translate-x-1/2 transform rounded-t-full bg-linear-to-b opacity-80 sm:top-6 sm:h-20 sm:w-32"
           ></div>
 
           <!-- Face -->
           <div
-            class="absolute left-1/2 top-12 h-20 w-16 -translate-x-1/2 transform rounded-full bg-linear-to-b from-light/90 to-light/70 sm:top-16 sm:h-24 sm:w-20"
+            class="from-light/90 to-light/70 absolute top-12 left-1/2 h-20 w-16 -translate-x-1/2 transform rounded-full bg-linear-to-b sm:top-16 sm:h-24 sm:w-20"
           ></div>
 
           <!-- Body -->
           <div
-            class="absolute left-1/2 top-24 h-24 w-20 -translate-x-1/2 transform rounded-t-full bg-linear-to-b from-primary/60 to-secondary/60 sm:top-32 sm:h-32 sm:w-24"
+            class="from-primary/60 to-secondary/60 absolute top-24 left-1/2 h-24 w-20 -translate-x-1/2 transform rounded-t-full bg-linear-to-b sm:top-32 sm:h-32 sm:w-24"
           ></div>
 
           <!-- Arms -->
           <div
-            class="absolute left-6 top-28 h-16 w-4 rotate-12 transform rounded-full bg-linear-to-b from-light/70 to-primary/40 sm:left-8 sm:top-36 sm:h-20 sm:w-6"
+            class="from-light/70 to-primary/40 absolute top-28 left-6 h-16 w-4 rotate-12 transform rounded-full bg-linear-to-b sm:top-36 sm:left-8 sm:h-20 sm:w-6"
           ></div>
           <div
-            class="absolute right-6 top-28 h-16 w-4 -rotate-12 transform rounded-full bg-linear-to-b from-light/70 to-primary/40 sm:right-8 sm:top-36 sm:h-20 sm:w-6"
+            class="from-light/70 to-primary/40 absolute top-28 right-6 h-16 w-4 -rotate-12 transform rounded-full bg-linear-to-b sm:top-36 sm:right-8 sm:h-20 sm:w-6"
           ></div>
         </div>
 
@@ -51,10 +51,10 @@
 
     <!-- Decorative elements -->
     <div
-      class="absolute -left-4 -top-4 h-12 w-12 animate-pulse-soft rounded-full bg-linear-to-br from-secondary/30 to-indigo/30 blur-lg sm:-left-8 sm:-top-8 sm:h-16 sm:w-16"
+      class="animate-pulse-soft from-secondary/30 to-indigo/30 absolute -top-4 -left-4 h-12 w-12 rounded-full bg-linear-to-br blur-lg sm:-top-8 sm:-left-8 sm:h-16 sm:w-16"
     ></div>
     <div
-      class="absolute -bottom-4 -right-4 h-16 w-16 animate-pulse-soft rounded-full bg-linear-to-br from-primary/30 to-accent/30 blur-xl sm:-bottom-8 sm:-right-8 sm:h-20 sm:w-20"
+      class="animate-pulse-soft from-primary/30 to-accent/30 absolute -right-4 -bottom-4 h-16 w-16 rounded-full bg-linear-to-br blur-xl sm:-right-8 sm:-bottom-8 sm:h-20 sm:w-20"
       style="animation-delay: -1s"
     ></div>
   </div>

@@ -1,7 +1,7 @@
 <template>
   <nav
     ref="navbar"
-    class="safe-area-inset-top fixed left-0 right-0 top-0 z-50 transition-all duration-300"
+    class="safe-area-inset-top fixed top-0 right-0 left-0 z-50 transition-all duration-300"
   >
     <div class="container mx-auto px-6 py-4">
       <div class="flex min-h-[60px] items-center justify-between">
@@ -9,12 +9,12 @@
           <Logo class="h-8 w-8 sm:h-10 sm:w-10" />
           <div class="flex flex-col">
             <span
-              class="bg-linear-to-r from-primary to-secondary bg-clip-text font-mono text-lg font-bold text-transparent sm:text-xl"
+              class="from-primary to-secondary bg-linear-to-r bg-clip-text font-mono text-lg font-bold text-transparent sm:text-xl"
             >
-              {{ navigation.logo?.text || "IMinaIT" }}
+              {{ navigation.logo?.text }}
             </span>
             <span class="hidden text-xs font-medium text-gray-400 sm:block">
-              {{ navigation.logo?.subtitle || "by Mina Amrouche" }}
+              {{ navigation.logo?.subtitle }}
             </span>
           </div>
         </div>
@@ -33,7 +33,7 @@
 
         <button
           @click="toggleMobileMenu"
-          class="-mr-2 touch-manipulation p-2 text-light md:hidden"
+          class="text-light -mr-2 touch-manipulation p-2 md:hidden"
         >
           <MenuIcon class="h-6 w-6" />
         </button>
@@ -43,7 +43,7 @@
     <!-- Mobile Menu -->
     <div
       v-show="isMobileMenuOpen"
-      class="safe-area-inset-bottom border-t border-primary/20 bg-dark-secondary/95 backdrop-blur-md md:hidden"
+      class="safe-area-inset-bottom border-primary/20 bg-dark-secondary/95 border-t backdrop-blur-md md:hidden"
     >
       <div class="container mx-auto space-y-4 px-6 py-4">
         <a

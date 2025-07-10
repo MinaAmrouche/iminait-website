@@ -8,10 +8,10 @@
             <span
               class="bg-linear-to-r from-primary to-secondary bg-clip-text font-mono text-lg font-bold text-transparent"
             >
-              {{ footer.logo?.text || "IMinaIT" }}
+              {{ footer.logo?.text }}
             </span>
             <span class="text-xs text-gray-400">
-              {{ footer.logo?.subtitle || "by Mina Amrouche" }}
+              {{ footer.logo?.subtitle }}
             </span>
           </div>
         </div>
@@ -37,7 +37,7 @@
       </div>
 
       <div class="mt-8 border-t border-primary/20 pt-8 text-center">
-        <p class="text-gray-400">{{ footer.copyright || "" }}</p>
+        <p class="text-gray-400">{{ footer.copyright }}</p>
       </div>
     </div>
   </footer>

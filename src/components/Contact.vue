@@ -3,10 +3,10 @@
     <div class="container mx-auto px-6">
       <div class="mb-16 text-center">
         <h2 class="section-title">
-          {{ contact.title || "Let's Create Together" }}
+          {{ contact.title }}
         </h2>
         <p class="mx-auto max-w-2xl text-gray-300">
-          {{ contact.subtitle || "" }}
+          {{ contact.subtitle }}
         </p>
       </div>
 
@@ -15,12 +15,12 @@
           <div class="space-y-8">
             <div>
               <h3
-                class="mb-6 bg-linear-to-r from-light to-primary bg-clip-text text-2xl font-bold text-transparent"
+                class="from-light to-primary mb-6 bg-linear-to-r bg-clip-text text-2xl font-bold text-transparent"
               >
-                {{ contact.mainTitle || "Get In Touch" }}
+                {{ contact.mainTitle }}
               </h3>
               <p class="mb-8 text-gray-300">
-                {{ contact.description || "" }}
+                {{ contact.description }}
               </p>
             </div>
 
@@ -37,7 +37,7 @@
                   />
                 </div>
                 <div>
-                  <h4 class="font-bold text-light">{{ method.title }}</h4>
+                  <h4 class="text-light font-bold">{{ method.title }}</h4>
                   <a
                     :href="method.href"
                     :target="method.href.includes('http') ? '_blank' : ''"
@@ -51,15 +51,15 @@
           </div>
 
           <div
-            class="rounded-4xl border border-primary/20 bg-dark p-8 shadow-soft"
+            class="border-primary/20 bg-dark shadow-soft rounded-4xl border p-8"
           >
             <form @submit.prevent="handleSubmit" class="space-y-6">
               <div>
                 <label
                   for="name"
-                  class="mb-2 block text-sm font-medium text-light"
+                  class="text-light mb-2 block text-sm font-medium"
                 >
-                  {{ contact.form?.fields?.name?.label || "Name" }}
+                  {{ contact.form?.fields?.name?.label }}
                 </label>
                 <input
                   v-model="form.name"
@@ -67,19 +67,17 @@
                   id="name"
                   name="name"
                   required
-                  class="w-full touch-manipulation rounded-xl border border-primary/30 bg-dark-secondary px-4 py-3 text-light placeholder-gray-400 transition-all focus:border-primary focus:outline-hidden focus:ring-2 focus:ring-primary/20"
-                  :placeholder="
-                    contact.form?.fields?.name?.placeholder || 'Your full name'
-                  "
+                  class="border-primary/30 bg-dark-secondary text-light focus:border-primary focus:ring-primary/20 w-full touch-manipulation rounded-xl border px-4 py-3 placeholder-gray-400 transition-all focus:ring-2 focus:outline-hidden"
+                  :placeholder="contact.form?.fields?.name?.placeholder"
                 />
               </div>
 
               <div>
                 <label
                   for="email"
-                  class="mb-2 block text-sm font-medium text-light"
+                  class="text-light mb-2 block text-sm font-medium"
                 >
-                  {{ contact.form?.fields?.email?.label || "Email" }}
+                  {{ contact.form?.fields?.email?.label }}
                 </label>
                 <input
                   v-model="form.email"
@@ -87,20 +85,17 @@
                   id="email"
                   name="email"
                   required
-                  class="w-full touch-manipulation rounded-xl border border-primary/30 bg-dark-secondary px-4 py-3 text-light placeholder-gray-400 transition-all focus:border-primary focus:outline-hidden focus:ring-2 focus:ring-primary/20"
-                  :placeholder="
-                    contact.form?.fields?.email?.placeholder ||
-                    'your.email@example.com'
-                  "
+                  class="border-primary/30 bg-dark-secondary text-light focus:border-primary focus:ring-primary/20 w-full touch-manipulation rounded-xl border px-4 py-3 placeholder-gray-400 transition-all focus:ring-2 focus:outline-hidden"
+                  :placeholder="contact.form?.fields?.email?.placeholder"
                 />
               </div>
 
               <div>
                 <label
                   for="subject"
-                  class="mb-2 block text-sm font-medium text-light"
+                  class="text-light mb-2 block text-sm font-medium"
                 >
-                  {{ contact.form?.fields?.subject?.label || "Subject" }}
+                  {{ contact.form?.fields?.subject?.label }}
                 </label>
                 <input
                   v-model="form.subject"
@@ -108,20 +103,17 @@
                   id="subject"
                   name="subject"
                   required
-                  class="w-full touch-manipulation rounded-xl border border-primary/30 bg-dark-secondary px-4 py-3 text-light placeholder-gray-400 transition-all focus:border-primary focus:outline-hidden focus:ring-2 focus:ring-primary/20"
-                  :placeholder="
-                    contact.form?.fields?.subject?.placeholder ||
-                    'Project inquiry'
-                  "
+                  class="border-primary/30 bg-dark-secondary text-light focus:border-primary focus:ring-primary/20 w-full touch-manipulation rounded-xl border px-4 py-3 placeholder-gray-400 transition-all focus:ring-2 focus:outline-hidden"
+                  :placeholder="contact.form?.fields?.subject?.placeholder"
                 />
               </div>
 
               <div>
                 <label
                   for="message"
-                  class="mb-2 block text-sm font-medium text-light"
+                  class="text-light mb-2 block text-sm font-medium"
                 >
-                  {{ contact.form?.fields?.message?.label || "Message" }}
+                  {{ contact.form?.fields?.message?.label }}
                 </label>
                 <textarea
                   v-model="form.message"
@@ -129,11 +121,8 @@
                   name="message"
                   rows="5"
                   required
-                  class="w-full touch-manipulation resize-none rounded-xl border border-primary/30 bg-dark-secondary px-4 py-3 text-light placeholder-gray-400 transition-all focus:border-primary focus:outline-hidden focus:ring-2 focus:ring-primary/20"
-                  :placeholder="
-                    contact.form?.fields?.message?.placeholder ||
-                    'Tell me about your project...'
-                  "
+                  class="border-primary/30 bg-dark-secondary text-light focus:border-primary focus:ring-primary/20 w-full touch-manipulation resize-none rounded-xl border px-4 py-3 placeholder-gray-400 transition-all focus:ring-2 focus:outline-hidden"
+                  :placeholder="contact.form?.fields?.message?.placeholder"
                 ></textarea>
               </div>
 
@@ -141,26 +130,26 @@
                 type="submit"
                 :disabled="isSubmitting"
                 :class="getSubmitButtonClass()"
-                class="w-full transform touch-manipulation rounded-xl px-6 py-3 font-bold shadow-glow transition-all duration-300 hover:scale-105 focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-dark"
+                class="shadow-glow focus:ring-primary focus:ring-offset-dark w-full transform touch-manipulation rounded-xl px-6 py-3 font-bold transition-all duration-300 hover:scale-105 focus:ring-2 focus:ring-offset-2 focus:outline-hidden cursor-pointer"
               >
                 <span
                   v-if="isSubmitting"
                   class="flex items-center justify-center"
                 >
                   <SpinnerIcon
-                    class="-ml-1 mr-3 h-5 w-5 animate-spin text-white"
+                    class="mr-3 -ml-1 h-5 w-5 animate-spin text-white"
                   />
-                  {{ contact.form?.loadingText || "Sending..." }}
+                  {{ contact.form?.loadingText }}
                 </span>
                 <span
                   v-else-if="isSuccess"
                   class="flex items-center justify-center"
                 >
                   <CheckIcon class="mr-2 h-5 w-5" />
-                  {{ contact.form?.successText || "Message Sent!" }}
+                  {{ contact.form?.successText }}
                 </span>
                 <span v-else>
-                  {{ contact.form?.submitButton || "Send Message" }}
+                  {{ contact.form?.submitButton }}
                 </span>
               </button>
             </form>

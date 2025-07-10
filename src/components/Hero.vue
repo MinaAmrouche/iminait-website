@@ -4,7 +4,7 @@
     class="relative flex min-h-screen items-center justify-center overflow-hidden px-4 pb-12 sm:px-6 lg:pb-0"
   >
     <div
-      class="absolute inset-0 bg-linear-to-br from-primary/10 via-dark to-dark-secondary"
+      class="from-primary/10 via-dark to-dark-secondary absolute inset-0 bg-linear-to-br"
     ></div>
 
     <!-- Soft Floating Elements -->
@@ -17,37 +17,37 @@
       ></div>
     </div>
 
-    <div class="container relative z-10 mx-auto w-full">
+    <div class="relative z-10 container mx-auto w-full">
       <div
         class="mt-20 grid items-center gap-8 lg:mt-0 lg:grid-cols-2 lg:gap-12"
       >
         <div class="order-2 text-center lg:order-1 lg:text-left">
           <div class="mb-8">
-            <p class="mb-3 text-base font-medium text-primary/80 sm:text-lg">
-              {{ hero.greeting || "Hi, I'm" }}
+            <p class="text-primary/80 mb-3 text-base font-medium sm:text-lg">
+              {{ hero.greeting }}
             </p>
             <h1
-              class="mb-6 text-4xl font-bold leading-tight sm:text-5xl lg:text-7xl"
+              class="mb-6 text-4xl leading-tight font-bold sm:text-5xl lg:text-7xl"
             >
               <span
-                class="bg-linear-to-r from-light via-primary to-secondary bg-clip-text text-transparent"
+                class="from-light via-primary to-secondary bg-linear-to-r bg-clip-text text-transparent"
               >
-                {{ hero.name?.first || "Mina" }}
+                {{ hero.name?.first }}{{ " " }}
               </span>
               <span
-                class="block bg-linear-to-r from-secondary via-cyan to-primary bg-clip-text text-transparent sm:inline lg:block xl:inline"
+                class="from-secondary via-cyan to-primary block bg-linear-to-r bg-clip-text text-transparent sm:inline lg:block xl:inline"
               >
-                {{ hero.name?.last || "Amrouche" }}
+                {{ hero.name?.last }}
               </span>
             </h1>
-            <div class="mb-4 text-lg text-primary/90 sm:text-xl lg:text-2xl">
+            <div class="text-primary/90 mb-4 text-lg sm:text-xl lg:text-2xl">
               <span class="font-mono">{{ currentTypedText }}</span>
-              <span class="animate-pulse text-secondary">|</span>
+              <span class="text-secondary animate-pulse">|</span>
             </div>
-            <p class="text-base font-medium text-secondary/80 sm:text-lg">
+            <p class="text-secondary/80 text-base font-medium sm:text-lg">
               {{ hero.subtitle || "Founder of" }}
               <span
-                class="bg-linear-to-r from-primary to-secondary bg-clip-text font-bold text-transparent"
+                class="from-primary to-secondary bg-linear-to-r bg-clip-text font-bold text-transparent"
               >
                 IMinaIT
               </span>
@@ -103,7 +103,7 @@
     >
       <a
         href="#about"
-        class="text-primary transition-colors hover:text-secondary"
+        class="text-primary hover:text-secondary transition-colors"
       >
         <ArrowDownIcon class="h-6 w-6" />
       </a>

@@ -2,9 +2,9 @@
   <section id="skills" class="bg-dark py-20">
     <div class="container mx-auto px-6">
       <div class="mb-16 text-center">
-        <h2 class="section-title">{{ skills.title || "Technical Skills" }}</h2>
+        <h2 class="section-title">{{ skills.title }}</h2>
         <p class="mx-auto max-w-2xl text-gray-300">
-          {{ skills.subtitle || "" }}
+          {{ skills.subtitle }}
         </p>
       </div>
 
@@ -36,8 +36,8 @@
 
 <script setup>
 import HtmlIcon from "../assets/icons/html.svg";
-import JavascriptIcon from "../assets/icons/javascript.svg";
-import ReactIcon from "../assets/icons/react.svg";
+import StackIcon from "../assets/icons/stack.svg";
+import CloudIcon from "../assets/icons/cloud.svg";
 import GithubIcon from "../assets/icons/github.svg";
 
 const props = defineProps({
@@ -47,7 +47,7 @@ const props = defineProps({
   },
 });
 
-const icons = [HtmlIcon, JavascriptIcon, ReactIcon, GithubIcon];
+const icons = [HtmlIcon, StackIcon, CloudIcon, GithubIcon];
 
 const gradients = [
   "from-primary to-secondary",
