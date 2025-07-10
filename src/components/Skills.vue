@@ -10,7 +10,7 @@
           />
           <div class="flex flex-col">
             <span
-              class="bg-gradient-to-r from-primary to-secondary bg-clip-text font-mono text-lg font-bold text-transparent"
+              class="bg-linear-to-r from-primary to-secondary bg-clip-text font-mono text-lg font-bold text-transparent"
             >
               {{ footer.logo?.text || "IMinaIT" }}
             </span>

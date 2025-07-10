@@ -4,7 +4,7 @@
     class="relative flex min-h-screen items-center justify-center overflow-hidden px-4 pb-12 sm:px-6 lg:pb-0"
   >
     <div
-      class="absolute inset-0 bg-gradient-to-br from-primary/10 via-dark to-dark-secondary"
+      class="absolute inset-0 bg-linear-to-br from-primary/10 via-dark to-dark-secondary"
     ></div>
 
     <!-- Soft Floating Elements -->
@@ -30,12 +30,12 @@
               class="mb-6 text-4xl font-bold leading-tight sm:text-5xl lg:text-7xl"
             >
               <span
-                class="bg-gradient-to-r from-light via-primary to-secondary bg-clip-text text-transparent"
+                class="bg-linear-to-r from-light via-primary to-secondary bg-clip-text text-transparent"
               >
                 {{ hero.name?.first || "Mina" }}
               </span>
               <span
-                class="block bg-gradient-to-r from-secondary via-cyan to-primary bg-clip-text text-transparent sm:inline lg:block xl:inline"
+                class="block bg-linear-to-r from-secondary via-cyan to-primary bg-clip-text text-transparent sm:inline lg:block xl:inline"
               >
                 {{ hero.name?.last || "Amrouche" }}
               </span>
@@ -47,7 +47,7 @@
             <p class="text-base font-medium text-secondary/80 sm:text-lg">
               {{ hero.subtitle || "Founder of" }}
               <span
-                class="bg-gradient-to-r from-primary to-secondary bg-clip-text font-bold text-transparent"
+                class="bg-linear-to-r from-primary to-secondary bg-clip-text font-bold text-transparent"
               >
                 IMinaIT
               </span>
@@ -149,27 +149,27 @@ const typedTexts = computed(() => {
 const floatingElements = [
   {
     class:
-      "floating-element absolute left-10 top-20 h-32 w-32 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 blur-xl",
+      "floating-element absolute left-10 top-20 h-32 w-32 rounded-full bg-linear-to-br from-primary/20 to-secondary/20 blur-xl",
     style: "",
   },
   {
     class:
-      "floating-element to-lavender/20 absolute right-20 top-40 h-24 w-24 rounded-full bg-gradient-to-br from-secondary/20 blur-lg",
+      "floating-element to-lavender/20 absolute right-20 top-40 h-24 w-24 rounded-full bg-linear-to-br from-secondary/20 blur-lg",
     style: "animation-delay: -2s",
   },
   {
     class:
-      "floating-element from-lavender/20 absolute bottom-40 left-20 h-40 w-40 rounded-full bg-gradient-to-br to-primary/20 blur-2xl",
+      "floating-element from-lavender/20 absolute bottom-40 left-20 h-40 w-40 rounded-full bg-linear-to-br to-primary/20 blur-2xl",
     style: "animation-delay: -4s",
   },
   {
     class:
-      "floating-element absolute bottom-20 right-10 h-20 w-20 rounded-full bg-gradient-to-br from-rose/20 to-accent/20 blur-lg",
+      "floating-element absolute bottom-20 right-10 h-20 w-20 rounded-full bg-linear-to-br from-rose/20 to-accent/20 blur-lg",
     style: "animation-delay: -1s",
   },
   {
     class:
-      "floating-element absolute left-1/4 top-1/2 h-16 w-16 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 blur-md",
+      "floating-element absolute left-1/4 top-1/2 h-16 w-16 rounded-full bg-linear-to-br from-accent/20 to-primary/20 blur-md",
     style: "animation-delay: -3s",
   },
 ];

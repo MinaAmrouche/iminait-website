@@ -13,7 +13,7 @@
       <div class="mx-auto max-w-4xl">
         <div class="relative">
           <div
-            class="to-lavender absolute bottom-0 left-8 top-0 w-0.5 bg-gradient-to-b from-primary via-secondary"
+            class="to-lavender absolute bottom-0 left-8 top-0 w-0.5 bg-linear-to-b from-primary via-secondary"
           ></div>
 
           <div class="space-y-12">
@@ -73,7 +73,7 @@ const gradients = ["from-primary to-secondary", "from-secondary to-indigo"];
 const colors = ["primary", "secondary"];
 
 const getIconContainerClass = (index) => {
-  return `flex-shrink-0 w-16 h-16 bg-gradient-to-br ${gradients[index]} rounded-full flex items-center justify-center shadow-glow`;
+  return `shrink-0 w-16 h-16 bg-linear-to-br ${gradients[index]} rounded-full flex items-center justify-center shadow-glow`;
 };
 
 const getCompanyClass = (index) => {

@@ -9,7 +9,7 @@
           <Logo class="h-8 w-8 sm:h-10 sm:w-10" />
           <div class="flex flex-col">
             <span
-              class="bg-gradient-to-r from-primary to-secondary bg-clip-text font-mono text-lg font-bold text-transparent sm:text-xl"
+              class="bg-linear-to-r from-primary to-secondary bg-clip-text font-mono text-lg font-bold text-transparent sm:text-xl"
             >
               {{ navigation.logo?.text || "IMinaIT" }}
             </span>

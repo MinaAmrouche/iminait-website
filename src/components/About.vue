@@ -18,7 +18,7 @@
             />
           </div>
           <div
-            class="absolute -bottom-4 -right-4 z-20 rounded-2xl bg-gradient-to-br from-secondary to-indigo p-4 text-white shadow-glow sm:-bottom-6 sm:-right-6 sm:p-6"
+            class="absolute -bottom-4 -right-4 z-20 rounded-2xl bg-linear-to-br from-secondary to-indigo p-4 text-white shadow-glow sm:-bottom-6 sm:-right-6 sm:p-6"
           >
             <p class="text-lg font-bold sm:text-xl">
               {{ about.experienceYears || "9+ Years" }}
@@ -29,17 +29,17 @@
           </div>
           <!-- Decorative elements -->
           <div
-            class="absolute -left-4 -top-4 h-16 w-16 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 blur-xl sm:h-24 sm:w-24"
+            class="absolute -left-4 -top-4 h-16 w-16 rounded-full bg-linear-to-br from-primary/20 to-secondary/20 blur-xl sm:h-24 sm:w-24"
           ></div>
           <div
-            class="absolute -right-6 top-1/2 h-12 w-12 rounded-full bg-gradient-to-br from-indigo/20 to-accent/20 blur-lg sm:-right-8 sm:h-16 sm:w-16"
+            class="absolute -right-6 top-1/2 h-12 w-12 rounded-full bg-linear-to-br from-indigo/20 to-accent/20 blur-lg sm:-right-8 sm:h-16 sm:w-16"
           ></div>
         </div>
 
         <div class="space-y-4 sm:space-y-6">
           <div>
             <h3
-              class="mb-4 bg-gradient-to-r from-light to-primary bg-clip-text text-2xl font-bold text-transparent sm:text-3xl"
+              class="mb-4 bg-linear-to-r from-light to-primary bg-clip-text text-2xl font-bold text-transparent sm:text-3xl"
             >
               {{ about.mainTitle || "Smart software, crafted with care" }}
             </h3>

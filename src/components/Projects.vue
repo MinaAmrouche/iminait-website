@@ -81,7 +81,7 @@ const gradients = [
 const colors = ["primary", "secondary", "indigo"];
 
 const getProjectImageClass = (index) => {
-  return `bg-gradient-to-br ${gradients[index]} h-40 sm:h-48 rounded-t-2xl flex items-center justify-center`;
+  return `bg-linear-to-br ${gradients[index]} h-40 sm:h-48 rounded-t-2xl flex items-center justify-center`;
 };
 
 const getLinkClass = (index) => {

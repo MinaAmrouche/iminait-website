@@ -1,6 +1,344 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-dark: #0f0f23;
+  --color-dark-secondary: #1a1a2e;
+
+  --color-light: #ffffff;
+  --color-light-secondary: #f8fafc;
+
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #99d0f4;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-primary-800: #075985;
+  --color-primary-900: #0c4a6e;
+  --color-primary: #99d0f4;
+
+  --color-secondary-50: #f0f9ff;
+  --color-secondary-100: #e0f2fe;
+  --color-secondary-200: #bae6fd;
+  --color-secondary-300: #7dd3fc;
+  --color-secondary-400: #38bdf8;
+  --color-secondary-500: #0ea5e9;
+  --color-secondary-600: #2c6d90;
+  --color-secondary-700: #0369a1;
+  --color-secondary-800: #075985;
+  --color-secondary-900: #0c4a6e;
+  --color-secondary: #2c6d90;
+
+  --color-tertiary-50: #f0f9ff;
+  --color-tertiary-100: #d1eafa;
+  --color-tertiary-200: #bae6fd;
+  --color-tertiary-300: #7dd3fc;
+  --color-tertiary-400: #38bdf8;
+  --color-tertiary-500: #0ea5e9;
+  --color-tertiary-600: #0284c7;
+  --color-tertiary-700: #0369a1;
+  --color-tertiary-800: #075985;
+  --color-tertiary-900: #0c4a6e;
+  --color-tertiary: #d1eafa;
+
+  --color-accent-50: #fef2f2;
+  --color-accent-100: #fee2e2;
+  --color-accent-200: #fecaca;
+  --color-accent-300: #fca5a5;
+  --color-accent-400: #f87171;
+  --color-accent-500: rgb(236, 84, 36);
+  --color-accent-600: #dc2626;
+  --color-accent-700: #b91c1c;
+  --color-accent-800: #991b1b;
+  --color-accent-900: #7f1d1d;
+  --color-accent: rgb(236, 84, 36);
+
+  --color-light-accent-50: #fef2f2;
+  --color-light-accent-100: #fee2e2;
+  --color-light-accent-200: #fecaca;
+  --color-light-accent-300: #fca5a5;
+  --color-light-accent-400: #f39072;
+  --color-light-accent-500: #ef4444;
+  --color-light-accent-600: #dc2626;
+  --color-light-accent-700: #b91c1c;
+  --color-light-accent-800: #991b1b;
+  --color-light-accent-900: #7f1d1d;
+  --color-light-accent: #f39072;
+
+  --color-cyan-50: #ecfeff;
+  --color-cyan-100: #cffafe;
+  --color-cyan-200: #a5f3fc;
+  --color-cyan-300: #67e8f9;
+  --color-cyan-400: #22d3ee;
+  --color-cyan-500: #99d0f4;
+  --color-cyan-600: #0891b2;
+  --color-cyan-700: #0e7490;
+  --color-cyan-800: #155e75;
+  --color-cyan-900: #164e63;
+  --color-cyan: #99d0f4;
+
+  --color-indigo-50: #eef2ff;
+  --color-indigo-100: #e0e7ff;
+  --color-indigo-200: #c7d2fe;
+  --color-indigo-300: #a5b4fc;
+  --color-indigo-400: #818cf8;
+  --color-indigo-500: #2c6d90;
+  --color-indigo-600: #4f46e5;
+  --color-indigo-700: #4338ca;
+  --color-indigo-800: #3730a3;
+  --color-indigo-900: #312e81;
+  --color-indigo: #2c6d90;
+
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #99d0f4;
+
+  --color-rose-50: #fff1f2;
+  --color-rose-100: #ffe4e6;
+  --color-rose-200: #fecdd3;
+  --color-rose-300: #fda4af;
+  --color-rose-400: #fb7185;
+  --color-rose-500: #f43f5e;
+  --color-rose-600: #e11d48;
+  --color-rose-700: #be123c;
+  --color-rose-800: #9f1239;
+  --color-rose-900: #881337;
+  --color-rose: #f43f5e;
+
+  --font-sans: futura-pt, system-ui, sans-serif;
+  --font-mono: JetBrains Mono, Fira Code, monospace;
+  --font-display: futura-pt, system-ui, sans-serif;
+
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-float: float 8s ease-in-out infinite;
+  --animate-fade-in-up: fadeInUp 0.8s ease-out;
+  --animate-slide-in-left: slideInLeft 0.8s ease-out;
+  --animate-slide-in-right: slideInRight 0.8s ease-out;
+  --animate-pulse-soft: pulseSoft 3s ease-in-out infinite;
+
+  --container-8xl: 88rem;
+  --container-9xl: 96rem;
+
+  --backdrop-blur-xs: 2px;
+
+  --shadow-glow: 0 0 30px rgba(153, 208, 244, 0.3);
+  --shadow-glow-lg: 0 0 50px rgba(153, 208, 244, 0.4);
+  --shadow-soft: 0 10px 40px rgba(153, 208, 244, 0.1);
+
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-30px) rotate(5deg);
+    }
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes pulseSoft {
+    0%,
+    100% {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility nav-link {
+  /* Navigation */
+  @apply text-gray-300 hover:text-primary transition-all duration-300 font-medium relative;
+
+  &::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-primary to-secondary transition-all duration-300 rounded-full;
+  }
+
+  &:hover::after {
+    @apply w-full;
+  }
+}
+
+@utility btn-primary {
+  /* Buttons */
+  @apply bg-linear-to-r from-primary to-secondary hover:from-secondary hover:to-indigo text-white font-bold py-3 px-6 sm:px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg text-sm sm:text-base touch-manipulation;
+}
+
+@utility btn-secondary {
+  @apply border-2 border-primary text-primary hover:bg-linear-to-r hover:from-primary hover:to-secondary hover:text-white font-bold py-3 px-6 sm:px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-glow text-sm sm:text-base touch-manipulation;
+}
+
+@utility section-title {
+  /* Section Titles */
+  @apply text-3xl sm:text-4xl lg:text-5xl font-bold bg-linear-to-r from-light via-primary to-secondary bg-clip-text text-transparent mb-6 relative inline-block;
+
+  &::after {
+    content: '';
+    @apply absolute -bottom-2 left-0 w-20 h-1 bg-linear-to-r from-primary to-secondary rounded-full;
+  }
+}
+
+@utility social-link {
+  /* Social Links */
+  @apply text-gray-400 hover:text-primary transition-all duration-300 transform hover:scale-110 p-2 rounded-lg hover:bg-primary/10 touch-manipulation;
+}
+
+@utility floating-element {
+  /* Floating Elements */
+  @apply absolute inset-0 bg-linear-to-br from-primary/10 via-dark to-dark-secondary;
+
+  &:nth-child(2) {
+    animation-delay: -2s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: -4s;
+  }
+
+  &:nth-child(4) {
+    animation-delay: -1s;
+  }
+
+  &:nth-child(5) {
+    animation-delay: -3s;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+@utility skill-category {
+  /* Skills */
+  @apply bg-dark-secondary p-6 sm:p-8 rounded-4xl border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 hover:shadow-glow;
+  @media (max-width: 768px) {
+    @apply transform-none hover:scale-100;
+  }
+}
+
+@utility skill-icon {
+  @apply w-12 sm:w-16 h-12 sm:h-16 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto shadow-glow;
+  @media (max-width: 768px) {
+    & svg {
+      @apply w-6 h-6;
+    }
+  }
+}
+
+@utility experience-item {
+  /* Experience */
+  @apply relative;
+
+  &::before {
+    content: '';
+    @apply absolute left-8 top-16 w-0.5 h-full bg-linear-to-b from-primary/50 to-transparent;
+  }
+}
+
+@utility project-card {
+  /* Projects */
+  @apply bg-dark-secondary rounded-4xl border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 overflow-hidden hover:shadow-glow;
+  @media (max-width: 768px) {
+    @apply transform-none hover:scale-100;
+  }
+}
+
+@utility project-image {
+  @apply relative overflow-hidden;
+}
+
+@utility tech-tag {
+  @apply bg-linear-to-r from-primary/20 to-secondary/20 text-primary px-3 py-1 rounded-full text-sm font-medium border border-primary/30;
+}
+
+@utility container {
+  /* Container */
+  @apply max-w-7xl mx-auto;
+}
+
+@utility touch-manipulation {
+  /* Mobile optimizations */
+
+  /* Touch targets */
+  touch-action: manipulation;
+}
+
+@utility safe-area-inset-top {
+  /* Safe area support for iOS */
+  padding-top: env(safe-area-inset-top);
+}
+
+@utility safe-area-inset-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@utility animate-fade-in-up {
+  /* Custom animations */
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@utility animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+@utility animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
 
 @layer base {
   html {
@@ -13,139 +351,7 @@
   }
 }
 
-@layer components {
-  /* Navigation */
-  .nav-link {
-    @apply text-gray-300 hover:text-primary transition-all duration-300 font-medium relative;
-  }
-  
-  .nav-link::after {
-    content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 rounded-full;
-  }
-  
-  .nav-link:hover::after {
-    @apply w-full;
-  }
-  
-  /* Buttons */
-  .btn-primary {
-    @apply bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-indigo text-white font-bold py-3 px-6 sm:px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg text-sm sm:text-base touch-manipulation;
-  }
-  
-  .btn-secondary {
-    @apply border-2 border-primary text-primary hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white font-bold py-3 px-6 sm:px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-glow text-sm sm:text-base touch-manipulation;
-  }
-  
-  /* Section Titles */
-  .section-title {
-    @apply text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-light via-primary to-secondary bg-clip-text text-transparent mb-6 relative inline-block;
-  }
-  
-  .section-title::after {
-    content: '';
-    @apply absolute -bottom-2 left-0 w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full;
-  }
-  
-  /* Social Links */
-  .social-link {
-    @apply text-gray-400 hover:text-primary transition-all duration-300 transform hover:scale-110 p-2 rounded-lg hover:bg-primary/10 touch-manipulation;
-  }
-  
-  /* Floating Elements */
-  .floating-element {
-    @apply absolute inset-0 bg-gradient-to-br from-primary/10 via-dark to-dark-secondary;
-  }
-  
-  .floating-element:nth-child(2) {
-    animation-delay: -2s;
-  }
-  
-  .floating-element:nth-child(3) {
-    animation-delay: -4s;
-  }
-  
-  .floating-element:nth-child(4) {
-    animation-delay: -1s;
-  }
-  
-  .floating-element:nth-child(5) {
-    animation-delay: -3s;
-  }
-  
-  /* Skills */
-  .skill-category {
-    @apply bg-dark-secondary p-6 sm:p-8 rounded-4xl border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 hover:shadow-glow;
-  }
-  
-  .skill-icon {
-    @apply w-12 sm:w-16 h-12 sm:h-16 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto shadow-glow;
-  }
-  
-  /* Experience */
-  .experience-item {
-    @apply relative;
-  }
-  
-  .experience-item::before {
-    content: '';
-    @apply absolute left-8 top-16 w-0.5 h-full bg-gradient-to-b from-primary/50 to-transparent;
-  }
-  
-  /* Projects */
-  .project-card {
-    @apply bg-dark-secondary rounded-4xl border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 overflow-hidden hover:shadow-glow;
-  }
-  
-  .project-image {
-    @apply relative overflow-hidden;
-  }
-  
-  .tech-tag {
-    @apply bg-gradient-to-r from-primary/20 to-secondary/20 text-primary px-3 py-1 rounded-full text-sm font-medium border border-primary/30;
-  }
-  
-  /* Container */
-  .container {
-    @apply max-w-7xl mx-auto;
-  }
-  
-  /* Mobile optimizations */
-  @media (max-width: 768px) {
-    .floating-element {
-      display: none;
-    }
-    
-    .skill-icon svg {
-      @apply w-6 h-6;
-    }
-    
-    .project-card {
-      @apply transform-none hover:scale-100;
-    }
-    
-    .skill-category {
-      @apply transform-none hover:scale-100;
-    }
-  }
-  
-  /* Touch targets */
-  .touch-manipulation {
-    touch-action: manipulation;
-  }
-  
-  /* Safe area support for iOS */
-  .safe-area-inset-top {
-    padding-top: env(safe-area-inset-top);
-  }
-  
-  .safe-area-inset-bottom {
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-}
-
 @layer utilities {
-  /* Custom animations */
   @keyframes float {
     0%, 100% {
       transform: translateY(0px) rotate(0deg);
@@ -201,18 +407,6 @@
       transform: scale(1.05);
     }
   }
-  
-  .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out;
-  }
-  
-  .animate-slide-in-left {
-    animation: slideInLeft 0.8s ease-out;
-  }
-  
-  .animate-slide-in-right {
-    animation: slideInRight 0.8s ease-out;
-  }
 }
 
 /* Scrollbar Styling */
@@ -225,7 +419,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gradient-to-b from-primary to-secondary rounded-full;
+  @apply bg-linear-to-b from-primary to-secondary rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {

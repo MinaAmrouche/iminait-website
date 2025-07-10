@@ -15,7 +15,7 @@
           <div class="space-y-8">
             <div>
               <h3
-                class="mb-6 bg-gradient-to-r from-light to-primary bg-clip-text text-2xl font-bold text-transparent"
+                class="mb-6 bg-linear-to-r from-light to-primary bg-clip-text text-2xl font-bold text-transparent"
               >
                 {{ contact.mainTitle || "Get In Touch" }}
               </h3>
@@ -67,7 +67,7 @@
                   id="name"
                   name="name"
                   required
-                  class="w-full touch-manipulation rounded-xl border border-primary/30 bg-dark-secondary px-4 py-3 text-light placeholder-gray-400 transition-all focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                  class="w-full touch-manipulation rounded-xl border border-primary/30 bg-dark-secondary px-4 py-3 text-light placeholder-gray-400 transition-all focus:border-primary focus:outline-hidden focus:ring-2 focus:ring-primary/20"
                   :placeholder="
                     contact.form?.fields?.name?.placeholder || 'Your full name'
                   "
@@ -87,7 +87,7 @@
                   id="email"
                   name="email"
                   required
-                  class="w-full touch-manipulation rounded-xl border border-primary/30 bg-dark-secondary px-4 py-3 text-light placeholder-gray-400 transition-all focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                  class="w-full touch-manipulation rounded-xl border border-primary/30 bg-dark-secondary px-4 py-3 text-light placeholder-gray-400 transition-all focus:border-primary focus:outline-hidden focus:ring-2 focus:ring-primary/20"
                   :placeholder="
                     contact.form?.fields?.email?.placeholder ||
                     'your.email@example.com'
@@ -108,7 +108,7 @@
                   id="subject"
                   name="subject"
                   required
-                  class="w-full touch-manipulation rounded-xl border border-primary/30 bg-dark-secondary px-4 py-3 text-light placeholder-gray-400 transition-all focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                  class="w-full touch-manipulation rounded-xl border border-primary/30 bg-dark-secondary px-4 py-3 text-light placeholder-gray-400 transition-all focus:border-primary focus:outline-hidden focus:ring-2 focus:ring-primary/20"
                   :placeholder="
                     contact.form?.fields?.subject?.placeholder ||
                     'Project inquiry'
@@ -129,7 +129,7 @@
                   name="message"
                   rows="5"
                   required
-                  class="w-full touch-manipulation resize-none rounded-xl border border-primary/30 bg-dark-secondary px-4 py-3 text-light placeholder-gray-400 transition-all focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                  class="w-full touch-manipulation resize-none rounded-xl border border-primary/30 bg-dark-secondary px-4 py-3 text-light placeholder-gray-400 transition-all focus:border-primary focus:outline-hidden focus:ring-2 focus:ring-primary/20"
                   :placeholder="
                     contact.form?.fields?.message?.placeholder ||
                     'Tell me about your project...'
@@ -141,7 +141,7 @@
                 type="submit"
                 :disabled="isSubmitting"
                 :class="getSubmitButtonClass()"
-                class="w-full transform touch-manipulation rounded-xl px-6 py-3 font-bold shadow-glow transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-dark"
+                class="w-full transform touch-manipulation rounded-xl px-6 py-3 font-bold shadow-glow transition-all duration-300 hover:scale-105 focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-dark"
               >
                 <span
                   v-if="isSubmitting"
@@ -207,7 +207,7 @@ const gradients = [
 const colors = ["primary", "secondary", "indigo"];
 
 const getMethodIconClass = (index) => {
-  return `w-12 h-12 bg-gradient-to-br ${gradients[index]} rounded-xl flex items-center justify-center shadow-glow`;
+  return `w-12 h-12 bg-linear-to-br ${gradients[index]} rounded-xl flex items-center justify-center shadow-glow`;
 };
 
 const getMethodLinkClass = (index) => {
@@ -220,9 +220,9 @@ const getMethodIconComponent = (index) => {
 
 const getSubmitButtonClass = () => {
   if (isSuccess.value) {
-    return "bg-gradient-to-r from-green-500 to-green-600 text-white";
+    return "bg-linear-to-r from-green-500 to-green-600 text-white";
   }
-  return "bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-indigo text-white";
+  return "bg-linear-to-r from-primary to-secondary hover:from-secondary hover:to-indigo text-white";
 };
 
 const handleSubmit = () => {
