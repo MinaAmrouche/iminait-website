@@ -148,6 +148,12 @@
                   <CheckIcon class="mr-2 h-5 w-5" />
                   {{ contact.form?.successText }}
                 </span>
+                <span
+                  v-else-if="errorMessage"
+                  class="flex items-center justify-center"
+                >
+                  {{ errorMessage }}
+                </span>
                 <span v-else>
                   {{ contact.form?.submitButton }}
                 </span>
@@ -185,6 +191,7 @@ const form = reactive({
 
 const isSubmitting = ref(false);
 const isSuccess = ref(false);
+const errorMessage = ref('');
 
 const icons = [EmailIcon, PhoneIcon, LinkedinIcon, MaltIcon];
 
@@ -213,14 +220,39 @@ const getSubmitButtonClass = () => {
   if (isSuccess.value) {
     return "bg-linear-to-r from-green-500 to-green-600 text-white";
   }
+  if (errorMessage.value) {
+    return "bg-linear-to-r from-red-500 to-red-600 text-white";
+  }
   return "bg-linear-to-r from-primary to-secondary hover:from-secondary hover:to-indigo text-white";
 };
 
-const handleSubmit = () => {
+const handleSubmit = async () => {
+  if (isSubmitting.value) return;
+  
   isSubmitting.value = true;
+  errorMessage.value = '';
 
-  // Simulate form submission
-  setTimeout(() => {
+  try {
+    const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        subject: form.subject,
+        message: form.message,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || 'Failed to send message');
+    }
+
     isSubmitting.value = false;
     isSuccess.value = true;
 
@@ -231,6 +263,16 @@ const handleSubmit = () => {
       });
       isSuccess.value = false;
     }, 3000);
-  }, 2000);
+
+  } catch (error) {
+    console.error('Error sending message:', error);
+    isSubmitting.value = false;
+    errorMessage.value = error.message || 'Failed to send message. Please try again.';
+    
+    // Clear error message after 5 seconds
+    setTimeout(() => {
+      errorMessage.value = '';
+    }, 5000);
+  }
 };
 </script>
