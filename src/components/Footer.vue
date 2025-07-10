@@ -3,11 +3,7 @@
     <div class="container mx-auto px-6">
       <div class="flex flex-col items-center justify-between md:flex-row">
         <div class="mb-4 flex items-center space-x-4 md:mb-0">
-          <img
-            src="/images/iminait-logo.svg"
-            alt="IMinaIT Logo"
-            class="h-8 w-8"
-          />
+          <Logo class="h-8 w-8" />
           <div class="flex flex-col">
             <span
               class="bg-linear-to-r from-primary to-secondary bg-clip-text font-mono text-lg font-bold text-transparent"
@@ -50,6 +46,7 @@
 <script setup>
 import GithubIcon from "../assets/icons/github.svg?component";
 import LinkedinIcon from "../assets/icons/linkedin.svg?component";
+import Logo from "../images/iminait-logo.svg?component";
 
 defineProps({
   footer: {
