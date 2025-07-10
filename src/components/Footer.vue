@@ -9,11 +9,13 @@
             class="h-8 w-8"
           />
           <div class="flex flex-col">
-            <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text font-mono text-lg font-bold text-transparent">
-              {{ footer.logo?.text || 'IMinaIT' }}
+            <span
+              class="bg-gradient-to-r from-primary to-secondary bg-clip-text font-mono text-lg font-bold text-transparent"
+            >
+              {{ footer.logo?.text || "IMinaIT" }}
             </span>
             <span class="text-xs text-gray-400">
-              {{ footer.logo?.subtitle || 'by Mina Amrouche' }}
+              {{ footer.logo?.subtitle || "by Mina Amrouche" }}
             </span>
           </div>
         </div>
@@ -25,7 +27,7 @@
             target="_blank"
             class="social-link"
           >
-            <GithubIcon class="w-5 h-5" />
+            <GithubIcon class="h-5 w-5" />
           </a>
           <a
             v-if="social.linkedin"
@@ -33,30 +35,30 @@
             target="_blank"
             class="social-link"
           >
-            <LinkedinIcon class="w-5 h-5" />
+            <LinkedinIcon class="h-5 w-5" />
           </a>
         </div>
       </div>
 
       <div class="mt-8 border-t border-primary/20 pt-8 text-center">
-        <p class="text-gray-400">{{ footer.copyright || '' }}</p>
+        <p class="text-gray-400">{{ footer.copyright || "" }}</p>
       </div>
     </div>
   </footer>
 </template>
 
 <script setup>
-import GithubIcon from '../assets/icons/github.svg?component'
-import LinkedinIcon from '../assets/icons/linkedin.svg?component'
+import GithubIcon from "../assets/icons/github.svg?component";
+import LinkedinIcon from "../assets/icons/linkedin.svg?component";
 
 defineProps({
   footer: {
     type: Object,
-    default: () => ({})
+    default: () => ({}),
   },
   social: {
     type: Object,
-    default: () => ({})
-  }
-})
+    default: () => ({}),
+  },
+});
 </script>

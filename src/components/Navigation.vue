@@ -15,12 +15,10 @@
             <span
               class="bg-gradient-to-r from-primary to-secondary bg-clip-text font-mono text-lg font-bold text-transparent sm:text-xl"
             >
-              {{ navigation.logo?.text || 'IMinaIT' }}
+              {{ navigation.logo?.text || "IMinaIT" }}
             </span>
-            <span
-              class="hidden text-xs font-medium text-gray-400 sm:block"
-            >
-              {{ navigation.logo?.subtitle || 'by Mina Amrouche' }}
+            <span class="hidden text-xs font-medium text-gray-400 sm:block">
+              {{ navigation.logo?.subtitle || "by Mina Amrouche" }}
             </span>
           </div>
         </div>
@@ -56,7 +54,7 @@
           v-for="link in navigation.links"
           :key="link.href"
           :href="link.href"
-          class="block nav-link py-3 text-lg touch-manipulation"
+          class="nav-link block touch-manipulation py-3 text-lg"
           @click="closeMobileMenu"
         >
           {{ link.text }}
@@ -67,61 +65,69 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-import { gsap } from 'gsap'
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
-import MenuIcon from '../assets/icons/menu.svg?component'
+import { ref, onMounted, onUnmounted } from "vue";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import MenuIcon from "../assets/icons/menu.svg?component";
 
-gsap.registerPlugin(ScrollToPlugin)
+gsap.registerPlugin(ScrollToPlugin);
 
 const props = defineProps({
   navigation: {
     type: Object,
-    default: () => ({})
+    default: () => ({}),
   },
   social: {
     type: Object,
-    default: () => ({})
-  }
-})
+    default: () => ({}),
+  },
+});
 
-const navbar = ref(null)
-const isMobileMenuOpen = ref(false)
+const navbar = ref(null);
+const isMobileMenuOpen = ref(false);
 
 const handleScroll = () => {
   if (window.scrollY > 100) {
-    navbar.value?.classList.add('bg-dark/95', 'backdrop-blur-md', 'shadow-glow')
+    navbar.value?.classList.add(
+      "bg-dark/95",
+      "backdrop-blur-md",
+      "shadow-glow",
+    );
   } else {
-    navbar.value?.classList.remove('bg-dark/95', 'backdrop-blur-md', 'shadow-glow')
+    navbar.value?.classList.remove(
+      "bg-dark/95",
+      "backdrop-blur-md",
+      "shadow-glow",
+    );
   }
-}
+};
 
 const toggleMobileMenu = () => {
-  isMobileMenuOpen.value = !isMobileMenuOpen.value
-}
+  isMobileMenuOpen.value = !isMobileMenuOpen.value;
+};
 
 const closeMobileMenu = () => {
-  isMobileMenuOpen.value = false
-}
+  isMobileMenuOpen.value = false;
+};
 
 const smoothScroll = (event) => {
-  event.preventDefault()
-  const target = document.querySelector(event.target.getAttribute('href'))
+  event.preventDefault();
+  const target = document.querySelector(event.target.getAttribute("href"));
   if (target) {
-    const offsetTop = target.offsetTop - 80
+    const offsetTop = target.offsetTop - 80;
     gsap.to(window, {
       duration: 1.5,
       scrollTo: { y: offsetTop, autoKill: false },
-      ease: 'power3.inOut'
-    })
+      ease: "power3.inOut",
+    });
   }
-}
+};
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
+  window.addEventListener("scroll", handleScroll);
+});
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
