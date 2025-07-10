@@ -53,8 +53,8 @@ import {
   useScrollAnimations,
   usePageAnimations,
 } from "./composables/useAnimations.js";
+import content from "./data/content.json";
 
-const content = ref({});
 const isLoading = ref(true);
 
 const { setupScrollAnimations, setupInteractiveEffects } =
@@ -63,11 +63,8 @@ const { animatePageLoad } = usePageAnimations();
 
 const loadContent = async () => {
   try {
-    const response = await fetch("./data/content.json");
-    content.value = await response.json();
-
     // Update page title
-    document.title = content.value.site?.title || "IMinaIT - Mina Amrouche";
+    document.title = content.site?.title || "IMinaIT - Mina Amrouche";
 
     isLoading.value = false;
 
