@@ -12,7 +12,7 @@
         <div class="relative">
           <div class="relative z-10">
             <img
-              src="images/profile-pic.webp"
+              src="/images/profile-pic.webp"
               alt="Mina Amrouche - Founder of IMinaIT"
               class="mx-auto w-full max-w-sm rounded-4xl border border-primary/20 shadow-soft sm:max-w-md"
             />

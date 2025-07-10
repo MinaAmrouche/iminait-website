@@ -7,7 +7,7 @@
       <div class="flex min-h-[60px] items-center justify-between">
         <div class="flex items-center space-x-4">
           <img
-            src="images/iminait-logo.svg"
+            src="/images/iminait-logo.svg"
             alt="IMinaIT Logo"
             class="h-8 w-8 sm:h-10 sm:w-10"
           />

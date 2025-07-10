@@ -4,7 +4,7 @@
       <div class="flex flex-col items-center justify-between md:flex-row">
         <div class="mb-4 flex items-center space-x-4 md:mb-0">
           <img
-            src="images/iminait-logo.svg"
+            src="/images/iminait-logo.svg"
             alt="IMinaIT Logo"
             class="h-8 w-8"
           />
