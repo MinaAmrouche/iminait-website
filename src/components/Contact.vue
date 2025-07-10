@@ -167,6 +167,7 @@ import PhoneIcon from "../assets/icons/phone.svg?component";
 import LinkedinIcon from "../assets/icons/linkedin.svg?component";
 import SpinnerIcon from "../assets/icons/spinner.svg?component";
 import CheckIcon from "../assets/icons/check.svg?component";
+import MaltIcon from "../assets/icons/malt.svg?component";
 
 const props = defineProps({
   contact: {
@@ -185,12 +186,13 @@ const form = reactive({
 const isSubmitting = ref(false);
 const isSuccess = ref(false);
 
-const icons = [EmailIcon, PhoneIcon, LinkedinIcon];
+const icons = [EmailIcon, PhoneIcon, LinkedinIcon, MaltIcon];
 
 const gradients = [
   "from-primary to-secondary",
   "from-secondary to-indigo",
   "from-indigo to-accent",
+  "from-accent to-primary",
 ];
 
 const colors = ["primary", "secondary", "indigo"];

@@ -16,7 +16,7 @@
         <div
           v-for="(project, index) in projects.items"
           :key="index"
-          class="project-card group"
+          class="project-card group flex flex-col"
         >
           <div class="project-image">
             <div :class="getProjectImageClass(index)">
@@ -26,29 +26,35 @@
               />
             </div>
           </div>
-          <div class="p-4 sm:p-6">
-            <h3 class="text-light mb-3 text-lg font-bold sm:text-xl">
-              {{ project.title }}
-            </h3>
-            <p class="mb-4 text-sm text-gray-400 sm:text-base">
-              {{ project.description }}
-            </p>
-            <div class="mb-4 flex flex-wrap gap-1 sm:gap-2">
-              <span
-                v-for="tech in project.technologies"
-                :key="tech"
-                class="tech-tag"
-              >
-                {{ tech }}
-              </span>
+          <div class="flex h-full flex-col justify-between p-4 sm:p-6">
+            <div>
+              <h3 class="text-light mb-3 text-lg font-bold sm:text-xl">
+                {{ project.title }}
+              </h3>
+              <p class="mb-4 text-sm text-gray-400 sm:text-base">
+                {{ project.description }}
+              </p>
             </div>
-            <div class="flex space-x-3 sm:space-x-4">
-              <a href="#" :class="getLinkClass(index)">
-                <GithubIcon class="h-4 w-4 sm:h-5 sm:w-5" />
-              </a>
-              <a href="#" :class="getLinkClass(index)">
-                <ExternalLinkIcon class="h-4 w-4 sm:h-5 sm:w-5" />
-              </a>
+            <div>
+              <div class="mb-4 flex flex-wrap gap-1 sm:gap-2">
+                <span
+                  v-for="tech in project.technologies"
+                  :key="tech"
+                  class="tech-tag"
+                >
+                  {{ tech }}
+                </span>
+              </div>
+              <div class="flex space-x-3 sm:space-x-4">
+                <a
+                  :href="project.link"
+                  target="_blank"
+                  :class="getLinkClass(index)"
+                  v-if="project.link"
+                >
+                  <ExternalLinkIcon class="h-4 w-4 sm:h-5 sm:w-5" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

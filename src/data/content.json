@@ -71,39 +71,42 @@
         "skills": [
           "React & Next.js",
           "Vue.js & Nuxt.js",
+          "State Management (Redux, Context, Hooks)",
           "TypeScript",
-          "Tailwind CSS",
-          "GSAP Animations"
+          "Tailwind CSS, MUI & Bootstrap",
+          "GSAP"
         ]
       },
       {
         "title": "Backend",
         "skills": [
-          "Node.js & Express",
-          "Python & Django",
-          "RESTful APIs",
-          "GraphQL",
-          "Microservices"
+          "Node.js (Express, Fastify)",
+          "Python (Flask)",
+          "REST & GraphQL APIs",
+          "Webhooks & Event Systems",
+          "Authentication & OAuth"
         ]
       },
       {
         "title": "Database & Cloud",
         "skills": [
-          "PostgreSQL & MongoDB",
-          "AWS & Azure",
-          "Docker & Kubernetes",
-          "Redis & Caching",
-          "CI/CD Pipelines"
+          "PostgreSQL, MongoDB & MySQL",
+          "Docker & Docker Compose",
+          "CI/CD (GitHub Actions, Gitlab CI, Jenkins)",
+          "Cloud deployments (GCP, AWS, Azure)",
+          "Firebase & Supabase",
+          "Monitoring & Logging (Sentry)"
         ]
       },
       {
         "title": "Tools & Methods",
         "skills": [
-          "Git & GitHub",
-          "Agile & Scrum",
-          "Testing (Jest, Cypress)",
-          "Webpack & Vite",
-          "Code Reviews"
+          "Git (Gitlab, Github, Bitbucket, Azure)",
+          "Agile & Remote Collaboration",
+          "Testing (Jest, Cypress, Cucumber)",
+          "Webpack, Vite, Rollup",
+          "Code Review & Mentoring",
+          "Stripe"
         ]
       }
     ]
@@ -116,24 +119,24 @@
         "title": "Founder & Senior Software Engineer",
         "company": "IMinaIT",
         "period": "2020 - Present",
-        "description": "Founded IMinaIT, leading full-stack development projects, architecting elegant solutions, and mentoring junior developers. Specialized in React, Vue.js, and cloud infrastructure.",
+        "description": "Founded IMinaIT, a flexible micro-agency model combining solo work with trusted collaborators. I lead design and development on every project — from interactive games and real-time XR platforms to scalable SaaS dashboards — always with a focus on performance, clarity, and user experience.",
         "achievements": [
-          "Built 15+ production applications serving 100k+ users",
-          "Reduced application load times by 60% through optimization",
-          "Led team of 5 developers using Agile methodologies",
-          "Implemented CI/CD pipelines reducing deployment time by 80%"
+          "Delivered 15+ web applications for clients in education, health, research, and tech",
+          "Published chrome extensions and mobile apps to iOS and Android stores using PWA technologies",
+          "Led the architecture of real-time platforms integrating WebSockets, XR engines, and creative tools",
+          "Created custom admin dashboards and content pipelines for non-technical users",
+          "Maintained a nationwide booking and management platform as the sole front-end developer"
         ]
       },
       {
-        "title": "Frontend Developer",
+        "title": "Software Engineer",
         "company": "Previous Companies",
         "period": "2016 - 2020",
-        "description": "Developed responsive web applications and collaborated with design teams to create exceptional user experiences across various industries.",
+        "description": "Worked as a software engineer across several companies and sectors, building e-commerce, data dashboards, and user interfaces in React, Vue, and Angular. Collaborated with designers and data teams to deliver robust, responsive web apps with clean, maintainable code.",
         "achievements": [
-          "Developed 20+ responsive web applications",
-          "Collaborated with UX/UI designers on user-centered design",
-          "Implemented modern JavaScript frameworks and libraries",
-          "Maintained 95%+ code coverage through comprehensive testing"
+          "Built data dashboards, internal tools, and user-facing apps in React, Vue, and Angular",
+          "Improved responsiveness across complex UI components",
+          "Collaborated closely with designers and backend developers using Zeplin and Figma"
         ]
       }
     ]
@@ -143,27 +146,51 @@
     "subtitle": "A selection of projects delivered independently or in collaboration — reflecting the diversity and flexibility of IMinaIT",
     "items": [
       {
-        "title": "Enterprise Dashboard",
-        "description": "Full-stack analytics platform built with React, Node.js, and PostgreSQL. Features real-time data visualization and user management.",
-        "technologies": ["React", "Node.js", "PostgreSQL", "AWS"]
+        "title": "XR-IT - Real-time XR orchestration",
+        "description": "A distributed platform built for the Design Academy Eindhoven to connect creative tools such as Unreal Engine, Unity, motion capture systems, and live video. I led the architecture and development of both the orchestrator and client interfaces, including a node-based UI built with React Flow.",
+        "technologies": [
+          "Next.js",
+          "Node.js",
+          "WebSockets",
+          "React Flow",
+          "Tailwind CSS",
+          "PostgreSQL"
+        ],
+        "link": "https://transrealitieslab.com/xr-it/"
       },
       {
-        "title": "E-Commerce Platform",
-        "description": "Modern e-commerce solution with Vue.js frontend, microservices architecture, and integrated payment processing.",
-        "technologies": ["Vue.js", "Python", "MongoDB", "Stripe"]
+        "title": "Animax - Cross-platform educational game",
+        "description": "We built Animax, an educational game for kids about endangered species. It features QR-code scanning, mini-games made with Phaser, and a Vue-based admin dashboard. Delivered as a PWA and mobile app, it supports offline use and fast performance thanks to advanced caching strategies.",
+        "technologies": [
+          "Vue 3",
+          "Firebase",
+          "Phaser",
+          "Vite",
+          "JavaScript",
+          "Adobe XD"
+        ]
       },
       {
-        "title": "Mobile-First PWA",
-        "description": "Progressive web application with offline capabilities, push notifications, and native app-like experience across all devices.",
-        "technologies": ["PWA", "TypeScript", "Service Workers", "Firebase"]
+        "title": "UbiOps - ML deployment interface",
+        "description": "At UbiOps, I built the entire front-end interface for their machine learning deployment platform, enabling users to manage models, pipelines, and datasets in real time. I collaborated closely with the backend team and recruited and mentored two junior developers. The app was built with React, Redux, and MUI and integrated with a Kubernetes backend.",
+        "technologies": [
+          "React",
+          "Redux",
+          "MUI",
+          "Docker",
+          "Kubernetes",
+          "GitLab CI",
+          "Cucumber",
+          "GCloud"
+        ]
       }
     ]
   },
   "contact": {
     "title": "Let's Create Together",
-    "subtitle": "Let’s talk about what you’re building. Whether you need expert frontend support or a full project team, IMinaIT is here to help.",
+    "subtitle": "Let's talk about what you're building. Whether you need expert frontend support or a full project team, IMinaIT is here to help.",
     "mainTitle": "Get In Touch",
-    "description": "I'm currently open to new collaborations — from ambitious prototypes to complete digital products. Let’s find the right way to work together.",
+    "description": "I'm currently open to new collaborations — from ambitious prototypes to complete digital products. Lets find the right way to work together.",
     "contactMethods": [
       {
         "type": "email",
@@ -182,6 +209,12 @@
         "title": "LinkedIn",
         "value": "Connect professionally",
         "href": "https://www.linkedin.com/in/mina-amrouche-a67b81115/"
+      },
+      {
+        "type": "malt",
+        "title": "Malt",
+        "value": "Check my profile",
+        "href": "https://www.malt.fr/profile/minaamrouche"
       }
     ],
     "form": {
