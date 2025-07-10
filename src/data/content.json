@@ -17,32 +17,30 @@
     ]
   },
   "hero": {
-    "greeting": "Hello, I'm",
+    "greeting": "Hi, I'm",
     "name": {
       "first": "Mina",
       "last": "Amrouche"
     },
     "typedTexts": [
+      "Frontend Specialist",
+      "React & Vue Expert",
       "Software Engineer",
       "Creative Problem Solver",
-      "Full-Stack Developer",
-      "React Specialist",
-      "Vue.js Expert",
-      "Technical Leader",
-      "UI/UX Enthusiast"
+      "Technical Leader"
     ],
     "subtitle": "Founder of IMinaIT",
-    "description": "Passionate software engineer and founder of IMinaIT, crafting beautiful, scalable applications with modern technologies. I create exceptional user experiences through clean code and thoughtful design.",
+    "description": "I’m a front-end specialist and founder of IMinaIT, a growing studio based in the Netherlands. I lead projects from design to development — often partnering with trusted collaborators to deliver elegant, user-friendly applications.",
     "buttons": {
-      "primary": "View My Work",
-      "secondary": "Let's Connect"
+      "primary": "See Our Work",
+      "secondary": "Work With Us"
     }
   },
   "about": {
-    "title": "About Me & IMinaIT",
-    "subtitle": "Passionate software engineer and founder of IMinaIT with 8+ years of experience creating beautiful, scalable applications and leading development teams.",
-    "mainTitle": "Software Engineer & Founder of IMinaIT",
-    "description": "I'm the founder of IMinaIT, a software development company specializing in creating beautiful, functional applications. My journey spans from elegant frontend experiences with React and Vue.js to robust backend systems, cloud architecture, and team leadership. I'm passionate about creating solutions that not only work flawlessly but also delight users.",
+    "title": "About IMinaIT",
+    "subtitle": "From a solo practice to a growing team — IMinaIT delivers high-quality web applications with care and clarity.",
+    "mainTitle": "Led by Mina Amrouche — Powered by Collaboration",
+    "description": "IMinaIT began as my solo development practice, focused on building thoughtful, performant web apps. Today, I still lead every project myself — but depending on your needs, I bring in trusted designers, developers, and researchers to expand our impact. This flexible, lightweight approach ensures every solution we deliver is crafted with care and focused on results.",
     "experienceYears": "8+ Years",
     "experienceLabel": "Experience",
     "skills": [
@@ -142,7 +140,7 @@
   },
   "projects": {
     "title": "Featured Projects",
-    "subtitle": "A showcase of recent work demonstrating technical expertise and creative problem-solving at IMinaIT",
+    "subtitle": "A selection of projects delivered independently or in collaboration — reflecting the diversity and flexibility of IMinaIT",
     "items": [
       {
         "title": "Enterprise Dashboard",
@@ -163,9 +161,9 @@
   },
   "contact": {
     "title": "Let's Create Together",
-    "subtitle": "Ready to bring your ideas to life? Let's discuss your next project and create something beautiful together with IMinaIT.",
+    "subtitle": "Let’s talk about what you’re building. Whether you need expert frontend support or a full project team, IMinaIT is here to help.",
     "mainTitle": "Get In Touch",
-    "description": "I'm always interested in new opportunities and exciting projects. Whether you need a full-stack developer, technical consultant, or creative collaborator, let's connect and explore how IMinaIT can help bring your vision to life.",
+    "description": "I'm currently open to new collaborations — from ambitious prototypes to complete digital products. Let’s find the right way to work together.",
     "contactMethods": [
       {
         "type": "email",
@@ -213,7 +211,7 @@
   "footer": {
     "logo": {
       "text": "IMinaIT",
-      "subtitle": "by Mina Amrouche"
+      "subtitle": "Web studio led by Mina Amrouche"
     },
     "copyright": "© 2024 IMinaIT by Mina Amrouche. All rights reserved. Crafted with passion and modern web technologies."
   },
