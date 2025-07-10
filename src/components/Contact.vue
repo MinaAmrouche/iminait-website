@@ -226,17 +226,17 @@ const getSubmitButtonClass = () => {
   return "bg-linear-to-r from-primary to-secondary hover:from-secondary hover:to-indigo text-white";
 };
 
-const handleSubmit = async () => {
+const handleSubmit = async (event) => {
   if (isSubmitting.value) return;
   
   isSubmitting.value = true;
   errorMessage.value = '';
 
   try {
-    const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`, {
+    // Replace 'YOUR_FORM_ID' with your actual Formspree form ID
+    const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -247,10 +247,8 @@ const handleSubmit = async () => {
       }),
     });
 
-    const data = await response.json();
-
     if (!response.ok) {
-      throw new Error(data.error || 'Failed to send message');
+      throw new Error('Failed to send message');
     }
 
     isSubmitting.value = false;
