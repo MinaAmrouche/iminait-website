@@ -113,7 +113,6 @@ const smoothScroll = (event) => {
   if (target) {
     const offsetTop = target.offsetTop - 80;
     gsap.to(window, {
-      duration: 1.5,
       scrollTo: { y: offsetTop, autoKill: false },
       ease: "power3.inOut",
     });
