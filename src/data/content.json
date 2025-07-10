@@ -29,8 +29,8 @@
       "Creative Problem Solver",
       "Technical Leader"
     ],
-    "subtitle": "Founder of IMinaIT",
-    "description": "I’m a front-end specialist and founder of IMinaIT, a growing studio based in the Netherlands. I lead projects from design to development — often partnering with trusted collaborators to deliver elegant, user-friendly applications.",
+    "subtitle": "Founder of",
+    "description": "I'm a software engineer and founder of IMinaIT, a growing studio based in the Netherlands. I lead projects from design to development — often partnering with trusted collaborators to deliver elegant, user-friendly applications.",
     "buttons": {
       "primary": "See Our Work",
       "secondary": "Work With Us"
@@ -39,9 +39,9 @@
   "about": {
     "title": "About IMinaIT",
     "subtitle": "From a solo practice to a growing team — IMinaIT delivers high-quality web applications with care and clarity.",
-    "mainTitle": "Led by Mina Amrouche — Powered by Collaboration",
+    "mainTitle": "Smart software, crafted with care",
     "description": "IMinaIT began as my solo development practice, focused on building thoughtful, performant web apps. Today, I still lead every project myself — but depending on your needs, I bring in trusted designers, developers, and researchers to expand our impact. This flexible, lightweight approach ensures every solution we deliver is crafted with care and focused on results.",
-    "experienceYears": "8+ Years",
+    "experienceYears": "9+ Years",
     "experienceLabel": "Experience",
     "skills": [
       {

@@ -1,189 +1,353 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="page-title">Loading...</title>
-    
+
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="https://use.typekit.net/vbs5wqp.css" />
     <link rel="icon" type="image/png" href="images/favicon.ico" />
-    
+
     <!-- Preload critical resources -->
     <link rel="preload" href="images/profile-pic.webp" as="image" />
     <link rel="preload" href="images/iminait-logo.svg" as="image" />
-    <link rel="preload" href="data/content.json" as="fetch" crossorigin="anonymous" />
-    
+    <link
+      rel="preload"
+      href="data/content.json"
+      as="fetch"
+      crossorigin="anonymous"
+    />
+
     <script type="module" src="js/main.js"></script>
   </head>
-  <body class="bg-dark text-light overflow-x-hidden">
+  <body class="overflow-x-hidden bg-dark text-light">
     <!-- Navigation -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 safe-area-inset-top">
+    <nav
+      id="navbar"
+      class="safe-area-inset-top fixed left-0 right-0 top-0 z-50 transition-all duration-300"
+    >
       <div class="container mx-auto px-6 py-4">
-        <div class="flex items-center justify-between min-h-[60px]">
+        <div class="flex min-h-[60px] items-center justify-between">
           <div class="flex items-center space-x-4">
-            <img src="images/iminait-logo.svg" alt="IMinaIT Logo" class="w-8 h-8 sm:w-10 sm:h-10" />
+            <img
+              src="images/iminait-logo.svg"
+              alt="IMinaIT Logo"
+              class="h-8 w-8 sm:h-10 sm:w-10"
+            />
             <div class="flex flex-col">
-              <span id="nav-logo-text" class="font-mono text-lg sm:text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Loading...</span>
-              <span id="nav-logo-subtitle" class="text-xs text-gray-400 font-medium hidden sm:block">Loading...</span>
+              <span
+                id="nav-logo-text"
+                class="bg-gradient-to-r from-primary to-secondary bg-clip-text font-mono text-lg font-bold text-transparent sm:text-xl"
+                >Loading...</span
+              >
+              <span
+                id="nav-logo-subtitle"
+                class="hidden text-xs font-medium text-gray-400 sm:block"
+                >Loading...</span
+              >
             </div>
           </div>
-          
-          <div class="hidden md:flex items-center space-x-6 lg:space-x-8" id="desktop-nav">
+
+          <div
+            class="hidden items-center space-x-6 md:flex lg:space-x-8"
+            id="desktop-nav"
+          >
             <!-- Navigation links will be populated by JavaScript -->
           </div>
-          
-          <button id="mobile-menu-btn" class="md:hidden text-light p-2 -mr-2 touch-manipulation">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+
+          <button
+            id="mobile-menu-btn"
+            class="-mr-2 touch-manipulation p-2 text-light md:hidden"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
             </svg>
           </button>
         </div>
       </div>
-      
+
       <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden bg-dark-secondary/95 backdrop-blur-md border-t border-primary/20 hidden safe-area-inset-bottom">
-        <div class="container mx-auto px-6 py-4 space-y-4" id="mobile-nav">
+      <div
+        id="mobile-menu"
+        class="safe-area-inset-bottom hidden border-t border-primary/20 bg-dark-secondary/95 backdrop-blur-md md:hidden"
+      >
+        <div class="container mx-auto space-y-4 px-6 py-4" id="mobile-nav">
           <!-- Mobile navigation links will be populated by JavaScript -->
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-6">
-      <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-dark to-dark-secondary"></div>
-      
+    <section
+      id="hero"
+      class="relative flex min-h-screen items-center justify-center overflow-hidden px-4 pb-12 sm:px-6 lg:pb-0"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-primary/10 via-dark to-dark-secondary"
+      ></div>
+
       <!-- Soft Floating Elements -->
-      <div class="absolute inset-0 overflow-hidden hidden sm:block">
-        <div class="floating-element absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-xl"></div>
-        <div class="floating-element absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-secondary/20 to-lavender/20 rounded-full blur-lg"></div>
-        <div class="floating-element absolute bottom-40 left-20 w-40 h-40 bg-gradient-to-br from-lavender/20 to-primary/20 rounded-full blur-2xl"></div>
-        <div class="floating-element absolute bottom-20 right-10 w-20 h-20 bg-gradient-to-br from-rose/20 to-accent/20 rounded-full blur-lg"></div>
-        <div class="floating-element absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full blur-md"></div>
+      <div class="absolute inset-0 hidden overflow-hidden sm:block">
+        <div
+          class="floating-element absolute left-10 top-20 h-32 w-32 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 blur-xl"
+        ></div>
+        <div
+          class="floating-element to-lavender/20 absolute right-20 top-40 h-24 w-24 rounded-full bg-gradient-to-br from-secondary/20 blur-lg"
+        ></div>
+        <div
+          class="floating-element from-lavender/20 absolute bottom-40 left-20 h-40 w-40 rounded-full bg-gradient-to-br to-primary/20 blur-2xl"
+        ></div>
+        <div
+          class="floating-element absolute bottom-20 right-10 h-20 w-20 rounded-full bg-gradient-to-br from-rose/20 to-accent/20 blur-lg"
+        ></div>
+        <div
+          class="floating-element absolute left-1/4 top-1/2 h-16 w-16 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 blur-md"
+        ></div>
       </div>
-      
-      <div class="container mx-auto relative z-10 w-full">
-        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div class="text-center lg:text-left order-2 lg:order-1">
+
+      <div class="container relative z-10 mx-auto w-full">
+        <div
+          class="mt-20 grid items-center gap-8 lg:mt-0 lg:grid-cols-2 lg:gap-12"
+        >
+          <div class="order-2 text-center lg:order-1 lg:text-left">
             <div class="mb-8">
-              <p id="hero-greeting" class="text-base sm:text-lg text-primary/80 mb-3 font-medium">Loading...</p>
-              <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-                <span id="hero-first-name" class="bg-gradient-to-r from-light via-primary to-secondary bg-clip-text text-transparent">Loading</span>
-                <span id="hero-last-name" class="bg-gradient-to-r from-secondary via-cyan to-primary bg-clip-text text-transparent block sm:inline lg:block xl:inline">Loading</span>
+              <p
+                id="hero-greeting"
+                class="mb-3 text-base font-medium text-primary/80 sm:text-lg"
+              >
+                Loading...
+              </p>
+              <h1
+                class="mb-6 text-4xl font-bold leading-tight sm:text-5xl lg:text-7xl"
+              >
+                <span
+                  id="hero-first-name"
+                  class="bg-gradient-to-r from-light via-primary to-secondary bg-clip-text text-transparent"
+                  >Loading</span
+                >
+                <span
+                  id="hero-last-name"
+                  class="block bg-gradient-to-r from-secondary via-cyan to-primary bg-clip-text text-transparent sm:inline lg:block xl:inline"
+                  >Loading</span
+                >
               </h1>
-              <div class="text-lg sm:text-xl lg:text-2xl text-primary/90 mb-4">
+              <div class="mb-4 text-lg text-primary/90 sm:text-xl lg:text-2xl">
                 <span id="typed-text" class="font-mono"></span>
                 <span class="animate-pulse text-secondary">|</span>
               </div>
-              <p id="hero-subtitle" class="text-base sm:text-lg text-secondary/80 font-medium">
-                Loading <span id="hero-company" class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-bold">Loading</span>
+              <p
+                id="hero-subtitle"
+                class="text-base font-medium text-secondary/80 sm:text-lg"
+              >
+                Loading
+                <span
+                  id="hero-company"
+                  class="bg-gradient-to-r from-primary to-secondary bg-clip-text font-bold text-transparent"
+                  >Loading</span
+                >
               </p>
             </div>
-            
-            <p id="hero-description" class="text-base sm:text-lg text-gray-300 mb-8 lg:mb-10 max-w-2xl leading-relaxed mx-auto lg:mx-0">
+
+            <p
+              id="hero-description"
+              class="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-gray-300 sm:text-lg lg:mx-0 lg:mb-10"
+            >
               Loading...
             </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 lg:mb-10">
-              <a href="#projects" id="hero-btn-primary" class="btn-primary">Loading...</a>
-              <a href="#contact" id="hero-btn-secondary" class="btn-secondary">Loading...</a>
+
+            <div
+              class="mb-8 flex flex-col justify-center gap-4 sm:flex-row lg:mb-10 lg:justify-start"
+            >
+              <a href="#projects" id="hero-btn-primary" class="btn-primary"
+                >Loading...</a
+              >
+              <a href="#contact" id="hero-btn-secondary" class="btn-secondary"
+                >Loading...</a
+              >
             </div>
-            
-            <div class="flex justify-center lg:justify-start space-x-4 sm:space-x-6" id="hero-social">
+
+            <div
+              class="flex justify-center lg:justify-start"
+              id="hero-social"
+            >
               <!-- Social links will be populated by JavaScript -->
             </div>
           </div>
-          
-          <div class="relative order-1 lg:order-2 mb-8 lg:mb-0">
+
+          <div class="relative order-1 mb-8 lg:order-2 lg:mb-0">
             <!-- Soft Illustration -->
-            <div class="relative z-10 max-w-xs sm:max-w-md mx-auto">
+            <div class="relative z-10 mx-auto max-w-xs sm:max-w-md">
               <div class="relative">
                 <!-- Main illustration container -->
-                <div class="w-64 h-64 sm:w-80 sm:h-80 mx-auto relative">
+                <div class="relative mx-auto h-64 w-64 sm:h-80 sm:w-80">
                   <!-- Background soft shapes -->
-                  <div class="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full blur-3xl animate-pulse-soft"></div>
-                  <div class="absolute top-4 left-4 right-4 bottom-4 bg-gradient-to-tr from-cyan/20 to-secondary/20 rounded-full blur-2xl animate-float"></div>
-                  
+                  <div
+                    class="absolute inset-0 animate-pulse-soft rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 blur-3xl"
+                  ></div>
+                  <div
+                    class="absolute bottom-4 left-4 right-4 top-4 animate-float rounded-full bg-gradient-to-tr from-cyan/20 to-secondary/20 blur-2xl"
+                  ></div>
+
                   <!-- Central figure -->
-                  <div class="absolute inset-8 bg-gradient-to-br from-light/10 to-primary/20 rounded-full backdrop-blur-sm border border-primary/30">
+                  <div
+                    class="absolute inset-8 rounded-full border border-primary/30 bg-gradient-to-br from-light/10 to-primary/20 backdrop-blur-sm"
+                  >
                     <!-- Hair -->
-                    <div class="absolute top-4 sm:top-6 left-1/2 transform -translate-x-1/2 w-24 sm:w-32 h-16 sm:h-20 bg-gradient-to-b from-secondary to-indigo rounded-t-full opacity-80"></div>
-                    
+                    <div
+                      class="absolute left-1/2 top-4 h-16 w-24 -translate-x-1/2 transform rounded-t-full bg-gradient-to-b from-secondary to-indigo opacity-80 sm:top-6 sm:h-20 sm:w-32"
+                    ></div>
+
                     <!-- Face -->
-                    <div class="absolute top-12 sm:top-16 left-1/2 transform -translate-x-1/2 w-16 sm:w-20 h-20 sm:h-24 bg-gradient-to-b from-light/90 to-light/70 rounded-full"></div>
-                    
+                    <div
+                      class="absolute left-1/2 top-12 h-20 w-16 -translate-x-1/2 transform rounded-full bg-gradient-to-b from-light/90 to-light/70 sm:top-16 sm:h-24 sm:w-20"
+                    ></div>
+
                     <!-- Body -->
-                    <div class="absolute top-24 sm:top-32 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-24 sm:h-32 bg-gradient-to-b from-primary/60 to-secondary/60 rounded-t-full"></div>
-                    
+                    <div
+                      class="absolute left-1/2 top-24 h-24 w-20 -translate-x-1/2 transform rounded-t-full bg-gradient-to-b from-primary/60 to-secondary/60 sm:top-32 sm:h-32 sm:w-24"
+                    ></div>
+
                     <!-- Arms -->
-                    <div class="absolute top-28 sm:top-36 left-6 sm:left-8 w-4 sm:w-6 h-16 sm:h-20 bg-gradient-to-b from-light/70 to-primary/40 rounded-full transform rotate-12"></div>
-                    <div class="absolute top-28 sm:top-36 right-6 sm:right-8 w-4 sm:w-6 h-16 sm:h-20 bg-gradient-to-b from-light/70 to-primary/40 rounded-full transform -rotate-12"></div>
+                    <div
+                      class="absolute left-6 top-28 h-16 w-4 rotate-12 transform rounded-full bg-gradient-to-b from-light/70 to-primary/40 sm:left-8 sm:top-36 sm:h-20 sm:w-6"
+                    ></div>
+                    <div
+                      class="absolute right-6 top-28 h-16 w-4 -rotate-12 transform rounded-full bg-gradient-to-b from-light/70 to-primary/40 sm:right-8 sm:top-36 sm:h-20 sm:w-6"
+                    ></div>
                   </div>
-                  
+
                   <!-- Floating elements around the figure -->
-                  <div class="absolute top-8 sm:top-12 right-6 sm:right-8 w-6 sm:w-8 h-6 sm:h-8 bg-gradient-to-br from-accent to-indigo rounded-full animate-float opacity-60"></div>
-                  <div class="absolute bottom-12 sm:bottom-16 left-4 sm:left-6 w-4 sm:w-6 h-4 sm:h-6 bg-gradient-to-br from-secondary to-primary rounded-full animate-float opacity-70" style="animation-delay: -1s;"></div>
-                  <div class="absolute top-16 sm:top-20 left-2 sm:left-4 w-3 sm:w-4 h-3 sm:h-4 bg-gradient-to-br from-indigo to-secondary rounded-full animate-float opacity-50" style="animation-delay: -2s;"></div>
-                  <div class="absolute bottom-16 sm:bottom-20 right-8 sm:right-12 w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-br from-primary to-accent rounded-full animate-float opacity-40" style="animation-delay: -0.5s;"></div>
+                  <div
+                    class="absolute right-6 top-8 h-6 w-6 animate-float rounded-full bg-gradient-to-br from-accent to-indigo opacity-60 sm:right-8 sm:top-12 sm:h-8 sm:w-8"
+                  ></div>
+                  <div
+                    class="absolute bottom-12 left-4 h-4 w-4 animate-float rounded-full bg-gradient-to-br from-secondary to-primary opacity-70 sm:bottom-16 sm:left-6 sm:h-6 sm:w-6"
+                    style="animation-delay: -1s"
+                  ></div>
+                  <div
+                    class="absolute left-2 top-16 h-3 w-3 animate-float rounded-full bg-gradient-to-br from-indigo to-secondary opacity-50 sm:left-4 sm:top-20 sm:h-4 sm:w-4"
+                    style="animation-delay: -2s"
+                  ></div>
+                  <div
+                    class="absolute bottom-16 right-8 h-8 w-8 animate-float rounded-full bg-gradient-to-br from-primary to-accent opacity-40 sm:bottom-20 sm:right-12 sm:h-10 sm:w-10"
+                    style="animation-delay: -0.5s"
+                  ></div>
                 </div>
               </div>
             </div>
-            
+
             <!-- Decorative elements -->
-            <div class="absolute -top-4 sm:-top-8 -left-4 sm:-left-8 w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-br from-secondary/30 to-indigo/30 rounded-full blur-lg animate-pulse-soft"></div>
-            <div class="absolute -bottom-4 sm:-bottom-8 -right-4 sm:-right-8 w-16 sm:w-20 h-16 sm:h-20 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-xl animate-pulse-soft" style="animation-delay: -1s;"></div>
+            <div
+              class="absolute -left-4 -top-4 h-12 w-12 animate-pulse-soft rounded-full bg-gradient-to-br from-secondary/30 to-indigo/30 blur-lg sm:-left-8 sm:-top-8 sm:h-16 sm:w-16"
+            ></div>
+            <div
+              class="absolute -bottom-4 -right-4 h-16 w-16 animate-pulse-soft rounded-full bg-gradient-to-br from-primary/30 to-accent/30 blur-xl sm:-bottom-8 sm:-right-8 sm:h-20 sm:w-20"
+              style="animation-delay: -1s"
+            ></div>
           </div>
         </div>
       </div>
-      
-      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#about" class="text-primary hover:text-secondary transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+
+      <!-- Scroll down arrow -->
+      <div
+        class="absolute bottom-2 left-1/2 -translate-x-1/2 transform animate-bounce lg:bottom-8"
+      >
+        <a
+          href="#about"
+          class="text-primary transition-colors hover:text-secondary"
+        >
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            ></path>
           </svg>
         </a>
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-dark-secondary">
+    <section id="about" class="bg-dark-secondary py-20">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
+        <div class="mb-16 text-center">
           <h2 id="about-title" class="section-title">Loading...</h2>
-          <p id="about-subtitle" class="text-gray-300 max-w-2xl mx-auto">
+          <p id="about-subtitle" class="mx-auto max-w-2xl text-gray-300">
             Loading...
           </p>
         </div>
-        
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+        <div class="grid items-center gap-12 lg:grid-cols-2">
           <div class="relative">
             <div class="relative z-10">
               <img
                 src="images/profile-pic.webp"
                 alt="Mina Amrouche - Founder of IMinaIT"
-                class="w-full max-w-sm sm:max-w-md mx-auto rounded-4xl shadow-soft border border-primary/20"
+                class="mx-auto w-full max-w-sm rounded-4xl border border-primary/20 shadow-soft sm:max-w-md"
               />
             </div>
-            <div class="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-gradient-to-br from-secondary to-indigo text-white p-4 sm:p-6 rounded-2xl shadow-glow">
-              <p id="about-experience-years" class="font-bold text-lg sm:text-xl">Loading</p>
-              <p id="about-experience-label" class="text-xs sm:text-sm opacity-90">Loading</p>
+            <div
+              class="absolute -bottom-4 -right-4 rounded-2xl bg-gradient-to-br from-secondary to-indigo p-4 text-white shadow-glow sm:-bottom-6 sm:-right-6 sm:p-6 z-20"
+            >
+              <p
+                id="about-experience-years"
+                class="text-lg font-bold sm:text-xl"
+              >
+                Loading
+              </p>
+              <p
+                id="about-experience-label"
+                class="text-xs opacity-90 sm:text-sm"
+              >
+                Loading
+              </p>
             </div>
             <!-- Decorative elements -->
-            <div class="absolute -top-4 -left-4 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-xl"></div>
-            <div class="absolute top-1/2 -right-6 sm:-right-8 w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-br from-indigo/20 to-accent/20 rounded-full blur-lg"></div>
+            <div
+              class="absolute -left-4 -top-4 h-16 w-16 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 blur-xl sm:h-24 sm:w-24"
+            ></div>
+            <div
+              class="absolute -right-6 top-1/2 h-12 w-12 rounded-full bg-gradient-to-br from-indigo/20 to-accent/20 blur-lg sm:-right-8 sm:h-16 sm:w-16"
+            ></div>
           </div>
-          
+
           <div class="space-y-4 sm:space-y-6">
             <div>
-              <h3 id="about-main-title" class="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-light to-primary bg-clip-text text-transparent mb-4">
+              <h3
+                id="about-main-title"
+                class="mb-4 bg-gradient-to-r from-light to-primary bg-clip-text text-2xl font-bold text-transparent sm:text-3xl"
+              >
                 Loading...
               </h3>
-              <p id="about-description" class="text-sm sm:text-base text-gray-300 leading-relaxed mb-4 sm:mb-6">
+              <p
+                id="about-description"
+                class="mb-4 text-sm leading-relaxed text-gray-300 sm:mb-6 sm:text-base"
+              >
                 Loading...
               </p>
             </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6" id="about-skills">
+
+            <div
+              class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6"
+              id="about-skills"
+            >
               <!-- Skill cards will be populated by JavaScript -->
             </div>
           </div>
@@ -192,35 +356,40 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-dark">
+    <section id="skills" class="bg-dark py-20">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
+        <div class="mb-16 text-center">
           <h2 id="skills-title" class="section-title">Loading...</h2>
-          <p id="skills-subtitle" class="text-gray-300 max-w-2xl mx-auto">
+          <p id="skills-subtitle" class="mx-auto max-w-2xl text-gray-300">
             Loading...
           </p>
         </div>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8" id="skills-categories">
+
+        <div
+          class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4"
+          id="skills-categories"
+        >
           <!-- Skill categories will be populated by JavaScript -->
         </div>
       </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-dark-secondary">
+    <section id="experience" class="bg-dark-secondary py-20">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
+        <div class="mb-16 text-center">
           <h2 id="experience-title" class="section-title">Loading...</h2>
-          <p id="experience-subtitle" class="text-gray-300 max-w-2xl mx-auto">
+          <p id="experience-subtitle" class="mx-auto max-w-2xl text-gray-300">
             Loading...
           </p>
         </div>
-        
-        <div class="max-w-4xl mx-auto">
+
+        <div class="mx-auto max-w-4xl">
           <div class="relative">
-            <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-lavender"></div>
-            
+            <div
+              class="to-lavender absolute bottom-0 left-8 top-0 w-0.5 bg-gradient-to-b from-primary via-secondary"
+            ></div>
+
             <div class="space-y-12" id="experience-items">
               <!-- Experience items will be populated by JavaScript -->
             </div>
@@ -230,49 +399,57 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-dark">
+    <section id="projects" class="bg-dark py-20">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
+        <div class="mb-16 text-center">
           <h2 id="projects-title" class="section-title">Loading...</h2>
-          <p id="projects-subtitle" class="text-gray-300 max-w-2xl mx-auto">
+          <p id="projects-subtitle" class="mx-auto max-w-2xl text-gray-300">
             Loading...
           </p>
         </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="projects-grid">
+
+        <div
+          class="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3"
+          id="projects-grid"
+        >
           <!-- Project cards will be populated by JavaScript -->
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-dark-secondary">
+    <section id="contact" class="bg-dark-secondary py-20">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
+        <div class="mb-16 text-center">
           <h2 id="contact-title" class="section-title">Loading...</h2>
-          <p id="contact-subtitle" class="text-gray-300 max-w-2xl mx-auto">
+          <p id="contact-subtitle" class="mx-auto max-w-2xl text-gray-300">
             Loading...
           </p>
         </div>
-        
-        <div class="max-w-4xl mx-auto">
-          <div class="grid lg:grid-cols-2 gap-12">
+
+        <div class="mx-auto max-w-4xl">
+          <div class="grid gap-12 lg:grid-cols-2">
             <div class="space-y-8">
               <div>
-                <h3 id="contact-main-title" class="text-2xl font-bold bg-gradient-to-r from-light to-primary bg-clip-text text-transparent mb-6">
+                <h3
+                  id="contact-main-title"
+                  class="mb-6 bg-gradient-to-r from-light to-primary bg-clip-text text-2xl font-bold text-transparent"
+                >
                   Loading...
                 </h3>
-                <p id="contact-description" class="text-gray-300 mb-8">
+                <p id="contact-description" class="mb-8 text-gray-300">
                   Loading...
                 </p>
               </div>
-              
+
               <div class="space-y-6" id="contact-methods">
                 <!-- Contact methods will be populated by JavaScript -->
               </div>
             </div>
-            
-            <div class="bg-dark p-8 rounded-4xl border border-primary/20 shadow-soft">
+
+            <div
+              class="rounded-4xl border border-primary/20 bg-dark p-8 shadow-soft"
+            >
               <form class="space-y-6" id="contact-form">
                 <!-- Form fields will be populated by JavaScript -->
               </form>
@@ -283,28 +460,35 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark py-12 border-t border-primary/20">
+    <footer class="border-t border-primary/20 bg-dark py-12">
       <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="flex items-center space-x-4 mb-4 md:mb-0">
-            <img src="images/iminait-logo.svg" alt="IMinaIT Logo" class="w-8 h-8" />
+        <div class="flex flex-col items-center justify-between md:flex-row">
+          <div class="mb-4 flex items-center space-x-4 md:mb-0">
+            <img
+              src="images/iminait-logo.svg"
+              alt="IMinaIT Logo"
+              class="h-8 w-8"
+            />
             <div class="flex flex-col">
-              <span id="footer-logo-text" class="font-mono text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <span
+                id="footer-logo-text"
+                class="bg-gradient-to-r from-primary to-secondary bg-clip-text font-mono text-lg font-bold text-transparent"
+              >
                 Loading
               </span>
-              <span id="footer-logo-subtitle" class="text-xs text-gray-400">Loading</span>
+              <span id="footer-logo-subtitle" class="text-xs text-gray-400"
+                >Loading</span
+              >
             </div>
           </div>
-          
+
           <div class="flex space-x-6" id="footer-social">
             <!-- Footer social links will be populated by JavaScript -->
           </div>
         </div>
-        
-        <div class="mt-8 pt-8 border-t border-primary/20 text-center">
-          <p id="footer-copyright" class="text-gray-400">
-            Loading...
-          </p>
+
+        <div class="mt-8 border-t border-primary/20 pt-8 text-center">
+          <p id="footer-copyright" class="text-gray-400">Loading...</p>
         </div>
       </div>
     </footer>
