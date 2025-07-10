@@ -44,7 +44,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref, onMounted } from 'vue'
 import Navigation from './components/Navigation.vue'
 import Hero from './components/Hero.vue'
@@ -54,51 +54,41 @@ import Experience from './components/Experience.vue'
 import Projects from './components/Projects.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
+import { useScrollAnimations, usePageAnimations } from './composables/useAnimations.js'
 
-export default {
-  name: 'App',
-  components: {
-    Navigation,
-    Hero,
-    About,
-    Skills,
-    Experience,
-    Projects,
-    Contact,
-    Footer
-  },
-  setup() {
-    const content = ref({})
-    const isLoading = ref(true)
+const content = ref({})
+const isLoading = ref(true)
 
-    const loadContent = async () => {
-      try {
-        const response = await fetch('./data/content.json')
-        content.value = await response.json()
-        
-        // Update page title
-        document.title = content.value.site?.title || 'IMinaIT - Mina Amrouche'
-        
-        isLoading.value = false
-      } catch (error) {
-        console.error('Failed to load content:', error)
-        isLoading.value = false
-      }
-    }
+const { setupScrollAnimations, setupInteractiveEffects } = useScrollAnimations()
+const { animatePageLoad } = usePageAnimations()
 
-    const toggleMobileMenu = () => {
-      // Mobile menu toggle logic will be handled in Navigation component
-    }
-
-    onMounted(() => {
-      loadContent()
-    })
-
-    return {
-      content,
-      isLoading,
-      toggleMobileMenu
-    }
+const loadContent = async () => {
+  try {
+    const response = await fetch('./data/content.json')
+    content.value = await response.json()
+    
+    // Update page title
+    document.title = content.value.site?.title || 'IMinaIT - Mina Amrouche'
+    
+    isLoading.value = false
+    
+    // Setup animations after content is loaded
+    setTimeout(() => {
+      setupScrollAnimations()
+      setupInteractiveEffects()
+      animatePageLoad()
+    }, 100)
+  } catch (error) {
+    console.error('Failed to load content:', error)
+    isLoading.value = false
   }
 }
+
+const toggleMobileMenu = () => {
+  // Mobile menu toggle logic is handled in Navigation component
+}
+
+onMounted(() => {
+  loadContent()
+})
 </script>

@@ -41,19 +41,7 @@
           @click="toggleMobileMenu"
           class="-mr-2 touch-manipulation p-2 text-light md:hidden"
         >
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
+          <MenuIcon class="h-6 w-6" />
         </button>
       </div>
     </div>
@@ -78,73 +66,62 @@
   </nav>
 </template>
 
-<script>
+<script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
+import MenuIcon from '../assets/icons/menu.svg'
 
 gsap.registerPlugin(ScrollToPlugin)
 
-export default {
-  name: 'Navigation',
-  props: {
-    navigation: {
-      type: Object,
-      default: () => ({})
-    },
-    social: {
-      type: Object,
-      default: () => ({})
-    }
+const props = defineProps({
+  navigation: {
+    type: Object,
+    default: () => ({})
   },
-  setup() {
-    const navbar = ref(null)
-    const isMobileMenuOpen = ref(false)
+  social: {
+    type: Object,
+    default: () => ({})
+  }
+})
 
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        navbar.value?.classList.add('bg-dark/95', 'backdrop-blur-md', 'shadow-glow')
-      } else {
-        navbar.value?.classList.remove('bg-dark/95', 'backdrop-blur-md', 'shadow-glow')
-      }
-    }
+const navbar = ref(null)
+const isMobileMenuOpen = ref(false)
 
-    const toggleMobileMenu = () => {
-      isMobileMenuOpen.value = !isMobileMenuOpen.value
-    }
-
-    const closeMobileMenu = () => {
-      isMobileMenuOpen.value = false
-    }
-
-    const smoothScroll = (event) => {
-      event.preventDefault()
-      const target = document.querySelector(event.target.getAttribute('href'))
-      if (target) {
-        const offsetTop = target.offsetTop - 80
-        gsap.to(window, {
-          duration: 1.5,
-          scrollTo: { y: offsetTop, autoKill: false },
-          ease: 'power3.inOut'
-        })
-      }
-    }
-
-    onMounted(() => {
-      window.addEventListener('scroll', handleScroll)
-    })
-
-    onUnmounted(() => {
-      window.removeEventListener('scroll', handleScroll)
-    })
-
-    return {
-      navbar,
-      isMobileMenuOpen,
-      toggleMobileMenu,
-      closeMobileMenu,
-      smoothScroll
-    }
+const handleScroll = () => {
+  if (window.scrollY > 100) {
+    navbar.value?.classList.add('bg-dark/95', 'backdrop-blur-md', 'shadow-glow')
+  } else {
+    navbar.value?.classList.remove('bg-dark/95', 'backdrop-blur-md', 'shadow-glow')
   }
 }
+
+const toggleMobileMenu = () => {
+  isMobileMenuOpen.value = !isMobileMenuOpen.value
+}
+
+const closeMobileMenu = () => {
+  isMobileMenuOpen.value = false
+}
+
+const smoothScroll = (event) => {
+  event.preventDefault()
+  const target = document.querySelector(event.target.getAttribute('href'))
+  if (target) {
+    const offsetTop = target.offsetTop - 80
+    gsap.to(window, {
+      duration: 1.5,
+      scrollTo: { y: offsetTop, autoKill: false },
+      ease: 'power3.inOut'
+    })
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
