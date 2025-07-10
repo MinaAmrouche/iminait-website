@@ -136,6 +136,9 @@
       </div>
     </div>
   </section>
+</template>
+
+<script>
 import { ref, reactive } from 'vue'
 
 export default {
