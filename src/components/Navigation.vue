@@ -6,11 +6,7 @@
     <div class="container mx-auto px-6 py-4">
       <div class="flex min-h-[60px] items-center justify-between">
         <div class="flex items-center space-x-4">
-          <img
-            src="/images/iminait-logo.svg"
-            alt="IMinaIT Logo"
-            class="h-8 w-8 sm:h-10 sm:w-10"
-          />
+          <Logo class="h-8 w-8 sm:h-10 sm:w-10" />
           <div class="flex flex-col">
             <span
               class="bg-gradient-to-r from-primary to-secondary bg-clip-text font-mono text-lg font-bold text-transparent sm:text-xl"
@@ -69,6 +65,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import MenuIcon from "../assets/icons/menu.svg?component";
+import Logo from "../images/iminait-logo.svg?component";
 
 gsap.registerPlugin(ScrollToPlugin);
 

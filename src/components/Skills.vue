@@ -48,10 +48,8 @@
 </template>
 
 <script setup>
-import HtmlIcon from "../assets/icons/html.svg?component";
-import JavascriptIcon from "../assets/icons/javascript.svg?component";
-import ReactIcon from "../assets/icons/react.svg?component";
 import GithubIcon from "../assets/icons/github.svg?component";
+import LinkedinIcon from "../assets/icons/linkedin.svg?component";
 
 defineProps({
   footer: {

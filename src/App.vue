@@ -4,7 +4,6 @@
     <Navigation
       :navigation="content.navigation"
       :social="content.social"
-      @toggle-mobile-menu="toggleMobileMenu"
     />
 
     <!-- Hero Section -->
@@ -82,10 +81,6 @@ const loadContent = async () => {
     console.error("Failed to load content:", error);
     isLoading.value = false;
   }
-};
-
-const toggleMobileMenu = () => {
-  // Mobile menu toggle logic is handled in Navigation component
 };
 
 onMounted(() => {

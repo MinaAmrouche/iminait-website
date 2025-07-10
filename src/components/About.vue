@@ -68,32 +68,23 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "About",
-  props: {
-    about: {
-      type: Object,
-      default: () => ({}),
-    },
+<script setup>
+defineProps({
+  about: {
+    type: Object,
+    default: () => ({}),
   },
-  setup() {
-    const colors = ["primary", "secondary", "indigo", "accent"];
+});
 
-    const getSkillCardClass = (index) => {
-      const color = colors[index % colors.length];
-      return `bg-dark p-4 sm:p-6 rounded-2xl border border-${color}/20 hover:border-${color}/40 transition-all duration-300 hover:shadow-glow`;
-    };
+const colors = ["primary", "secondary", "indigo", "accent"];
 
-    const getSkillTitleClass = (index) => {
-      const color = colors[index % colors.length];
-      return `font-bold text-${color} mb-2 text-sm sm:text-base`;
-    };
+const getSkillCardClass = (index) => {
+  const color = colors[index % colors.length];
+  return `bg-dark p-4 sm:p-6 rounded-2xl border border-${color}/20 hover:border-${color}/40 transition-all duration-300 hover:shadow-glow`;
+};
 
-    return {
-      getSkillCardClass,
-      getSkillTitleClass,
-    };
-  },
+const getSkillTitleClass = (index) => {
+  const color = colors[index % colors.length];
+  return `font-bold text-${color} mb-2 text-sm sm:text-base`;
 };
 </script>

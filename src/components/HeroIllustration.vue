@@ -60,36 +60,27 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "HeroIllustration",
-  setup() {
-    const floatingElements = [
-      {
-        class:
-          "absolute right-6 top-8 h-6 w-6 animate-float rounded-full bg-gradient-to-br from-accent to-indigo opacity-60 sm:right-8 sm:top-12 sm:h-8 sm:w-8",
-        style: "",
-      },
-      {
-        class:
-          "absolute bottom-12 left-4 h-4 w-4 animate-float rounded-full bg-gradient-to-br from-secondary to-primary opacity-70 sm:bottom-16 sm:left-6 sm:h-6 sm:w-6",
-        style: "animation-delay: -1s",
-      },
-      {
-        class:
-          "absolute left-2 top-16 h-3 w-3 animate-float rounded-full bg-gradient-to-br from-indigo to-secondary opacity-50 sm:left-4 sm:top-20 sm:h-4 sm:w-4",
-        style: "animation-delay: -2s",
-      },
-      {
-        class:
-          "absolute bottom-16 right-8 h-8 w-8 animate-float rounded-full bg-gradient-to-br from-primary to-accent opacity-40 sm:bottom-20 sm:right-12 sm:h-10 sm:w-10",
-        style: "animation-delay: -0.5s",
-      },
-    ];
-
-    return {
-      floatingElements,
-    };
+<script setup>
+const floatingElements = [
+  {
+    class:
+      "absolute right-6 top-8 h-6 w-6 animate-float rounded-full bg-gradient-to-br from-accent to-indigo opacity-60 sm:right-8 sm:top-12 sm:h-8 sm:w-8",
+    style: "",
   },
-};
+  {
+    class:
+      "absolute bottom-12 left-4 h-4 w-4 animate-float rounded-full bg-gradient-to-br from-secondary to-primary opacity-70 sm:bottom-16 sm:left-6 sm:h-6 sm:w-6",
+    style: "animation-delay: -1s",
+  },
+  {
+    class:
+      "absolute left-2 top-16 h-3 w-3 animate-float rounded-full bg-gradient-to-br from-indigo to-secondary opacity-50 sm:left-4 sm:top-20 sm:h-4 sm:w-4",
+    style: "animation-delay: -2s",
+  },
+  {
+    class:
+      "absolute bottom-16 right-8 h-8 w-8 animate-float rounded-full bg-gradient-to-br from-primary to-accent opacity-40 sm:bottom-20 sm:right-12 sm:h-10 sm:w-10",
+    style: "animation-delay: -0.5s",
+  },
+];
 </script>
