@@ -42,8 +42,8 @@
 </template>
 
 <script setup>
-import StarIcon from '../assets/icons/star.svg'
-import CheckCircleIcon from '../assets/icons/check-circle.svg'
+import StarIcon from '../assets/icons/star.svg?component'
+import CheckCircleIcon from '../assets/icons/check-circle.svg?component'
 
 const props = defineProps({
   experience: {

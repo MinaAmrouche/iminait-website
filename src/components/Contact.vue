@@ -133,11 +133,11 @@
 
 <script setup>
 import { ref, reactive } from 'vue'
-import EmailIcon from '../assets/icons/email.svg'
-import PhoneIcon from '../assets/icons/phone.svg'
-import LinkedinIcon from '../assets/icons/linkedin.svg'
-import SpinnerIcon from '../assets/icons/spinner.svg'
-import CheckIcon from '../assets/icons/check.svg'
+import EmailIcon from '../assets/icons/email.svg?component'
+import PhoneIcon from '../assets/icons/phone.svg?component'
+import LinkedinIcon from '../assets/icons/linkedin.svg?component'
+import SpinnerIcon from '../assets/icons/spinner.svg?component'
+import CheckIcon from '../assets/icons/check.svg?component'
 
 const props = defineProps({
   contact: {

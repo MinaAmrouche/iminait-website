@@ -93,9 +93,9 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import HeroIllustration from './HeroIllustration.vue'
-import GithubIcon from '../assets/icons/github.svg'
-import LinkedinIcon from '../assets/icons/linkedin.svg'
-import ArrowDownIcon from '../assets/icons/arrow-down.svg'
+import GithubIcon from '../assets/icons/github.svg?component'
+import LinkedinIcon from '../assets/icons/linkedin.svg?component'
+import ArrowDownIcon from '../assets/icons/arrow-down.svg?component'
 
 const props = defineProps({
   hero: {

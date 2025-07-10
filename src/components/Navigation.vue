@@ -70,7 +70,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
-import MenuIcon from '../assets/icons/menu.svg'
+import MenuIcon from '../assets/icons/menu.svg?component'
 
 gsap.registerPlugin(ScrollToPlugin)
 

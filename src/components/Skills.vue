@@ -1,59 +1,64 @@
 <template>
-  <section id="skills" class="bg-dark py-20">
+  <footer class="border-t border-primary/20 bg-dark py-12">
     <div class="container mx-auto px-6">
-      <div class="mb-16 text-center">
-        <h2 class="section-title">{{ skills.title || 'Technical Skills' }}</h2>
-        <p class="mx-auto max-w-2xl text-gray-300">
-          {{ skills.subtitle || '' }}
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
-        <div
-          v-for="(category, index) in skills.categories"
-          :key="index"
-          class="skill-category group"
-        >
-          <div :class="getIconClass(index)">
-            <component :is="getIconComponent(index)" class="w-6 sm:w-8 h-6 sm:h-8 text-white" />
+      <div class="flex flex-col items-center justify-between md:flex-row">
+        <div class="mb-4 flex items-center space-x-4 md:mb-0">
+          <img
+            src="/images/iminait-logo.svg"
+            alt="IMinaIT Logo"
+            class="h-8 w-8"
+          />
+          <div class="flex flex-col">
+            <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text font-mono text-lg font-bold text-transparent">
+              {{ footer.logo?.text || 'IMinaIT' }}
+            </span>
+            <span class="text-xs text-gray-400">
+              {{ footer.logo?.subtitle || 'by Mina Amrouche' }}
+            </span>
           </div>
-          <h3 class="text-lg sm:text-xl font-bold text-light mb-3 sm:mb-4">{{ category.title }}</h3>
-          <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-400">
-            <li v-for="skill in category.skills" :key="skill">{{ skill }}</li>
-          </ul>
+        </div>
+
+        <div class="flex space-x-6">
+          <a
+            v-if="social.github"
+            :href="social.github"
+            target="_blank"
+            class="social-link"
+          >
+            <GithubIcon class="w-5 h-5" />
+          </a>
+          <a
+            v-if="social.linkedin"
+            :href="social.linkedin"
+            target="_blank"
+            class="social-link"
+          >
+            <LinkedinIcon class="w-5 h-5" />
+          </a>
         </div>
       </div>
+
+      <div class="mt-8 border-t border-primary/20 pt-8 text-center">
+        <p class="text-gray-400">{{ footer.copyright || '' }}</p>
+      </div>
     </div>
-  </section>
+  </footer>
 </template>
 
 <script setup>
-import HtmlIcon from '../assets/icons/html.svg'
-import JavascriptIcon from '../assets/icons/javascript.svg'
-import ReactIcon from '../assets/icons/react.svg'
-import GithubIcon from '../assets/icons/github.svg'
+import HtmlIcon from '../assets/icons/html.svg?component'
+import JavascriptIcon from '../assets/icons/javascript.svg?component'
+import ReactIcon from '../assets/icons/react.svg?component'
+import GithubIcon from '../assets/icons/github.svg?component'
 
-const props = defineProps({
-  skills: {
+defineProps({
+  footer: {
+    type: Object,
+    default: () => ({})
+  },
+  social: {
     type: Object,
     default: () => ({})
   }
 })
-
-const icons = [HtmlIcon, JavascriptIcon, ReactIcon, GithubIcon]
-
-const gradients = [
-  'from-primary to-secondary',
-  'from-secondary to-indigo',
-  'from-indigo to-accent',
-  'from-accent to-primary'
-]
-
-const getIconClass = (index) => {
-  return `skill-icon bg-gradient-to-br ${gradients[index]}`
-}
-
-const getIconComponent = (index) => {
-  return icons[index]
-}
 </script>

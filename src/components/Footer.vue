@@ -46,8 +46,8 @@
 </template>
 
 <script setup>
-import GithubIcon from '../assets/icons/github.svg'
-import LinkedinIcon from '../assets/icons/linkedin.svg'
+import GithubIcon from '../assets/icons/github.svg?component'
+import LinkedinIcon from '../assets/icons/linkedin.svg?component'
 
 defineProps({
   footer: {

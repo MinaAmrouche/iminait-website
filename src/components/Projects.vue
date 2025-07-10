@@ -47,10 +47,10 @@
 </template>
 
 <script setup>
-import CheckCircleIcon from '../assets/icons/check-circle.svg'
-import StarIcon from '../assets/icons/star.svg'
-import GithubIcon from '../assets/icons/github.svg'
-import ExternalLinkIcon from '../assets/icons/external-link.svg'
+import CheckCircleIcon from '../assets/icons/check-circle.svg?component'
+import StarIcon from '../assets/icons/star.svg?component'
+import GithubIcon from '../assets/icons/github.svg?component'
+import ExternalLinkIcon from '../assets/icons/external-link.svg?component'
 
 const props = defineProps({
   projects: {
